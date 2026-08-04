@@ -335,7 +335,7 @@
     border: 1px solid rgba(214, 170, 72, 0.18);
     border-radius: 32px;
     box-shadow: 0 35px 80px rgba(42, 25, 90, 0.12);
-    padding: 24px 48px 32px 48px;
+    padding: 20px 48px 25px 48px;
     position: relative;
     z-index: 10;
     max-width: 100%;
@@ -414,42 +414,48 @@
 }
 
 
-/* Elegant Title inside Card */
-.calc-header.premium-header {
+/* --- New Header Design --- */
+.calc-header.redesigned-header {
     text-align: center;
-    margin-bottom: 20px;
-    /* Reduced space below header */
+    margin-bottom: 15px;
     position: relative;
     z-index: 2;
 }
 
-.calc-header-title.shimmer-text {
+.header-main-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.header-user-icon {
+    width: 56px;
+    height: 56px;
+    background-color: #F3EEFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-main-title h2 {
     font-size: 24px;
     font-weight: 700;
     color: #1a153a;
     font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
+    margin: 0;
 }
 
-.calc-header-title.shimmer-text::before,
-.calc-header-title.shimmer-text::after {
-    content: '';
-    height: 1px;
-    width: 60px;
-    /* Length of the golden line */
-    background: linear-gradient(90deg, transparent, rgba(214, 170, 72, 0.6), transparent);
-    margin: 0 5px;
+.header-subtitle {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+    font-weight: 500;
 }
 
-.calc-header-title .star {
-    color: #d6aa48;
-    font-size: 16px;
-    animation: pulse 3s infinite;
-}
 
 .calc-header-title .icon {
     font-size: 20px;
@@ -482,9 +488,13 @@
 
 .calc-form-grid {
     display: grid;
-    grid-template-columns: 1.15fr 1.15fr 1.1fr;
+    grid-template-columns: repeat(6, 1fr);
     gap: 16px;
     align-items: flex-end;
+}
+
+.calc-form-grid > .form-group {
+    grid-column: span 2;
 }
 
 .privacy-group, .action-group {
@@ -496,15 +506,34 @@
     justify-content: center;
 }
 
-.form-group label {
-    display: block;
+.form-group label.icon-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 13px;
     font-weight: 600;
     color: #3b306a;
     margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.8;
+}
+
+.label-icon-box {
+    width: 28px;
+    height: 28px;
+    background-color: #F3EEFF;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 901px) {
+    .birth-city-group.full-width {
+        grid-column: span 3;
+    }
+    
+    .action-group.full-width {
+        grid-column: span 3;
+    }
 }
 
 .input-group.luxury-input {
@@ -562,12 +591,39 @@
 }
 
 /* Action Box & Button */
-.action-group {
+
+.btn-calculate.luxury-btn.new-design-btn {
+    background: linear-gradient(135deg, #5014C9 0%, #7641F4 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 0 20px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    margin-top: 10px;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(80, 20, 201, 0.3);
+}
+
+.btn-calculate.luxury-btn.new-design-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(80, 20, 201, 0.4);
+}
+
+.btn-icon-left {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-calculate.luxury-btn {
