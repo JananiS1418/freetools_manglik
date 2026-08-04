@@ -373,10 +373,6 @@
                 <!-- Premium Background Watermarks inside card -->
                 <div class="card-bg-mandala"></div>
                 <div class="card-bg-glow"></div>
-                <div class="card-corner tl"></div>
-                <div class="card-corner tr"></div>
-                <div class="card-corner bl"></div>
-                <div class="card-corner br"></div>
 
                 <div class="calc-header redesigned-header">
                     <div class="header-main-title">
@@ -475,119 +471,161 @@
 
         <div class="container result-container">
             <!-- 1. Birth Details Summary Card -->
-            <div class="result-card birth-summary-card">
-                <div class="card-bg-mandala"></div>
-                <div class="card-bg-glow"></div>
+            <div class="result-card birth-summary-card premium-birth-card">
+                <!-- Premium Backgrounds -->
+                <div class="bg-decor bg-zodiac"></div>
+                <div class="bg-decor bg-mars"></div>
+                <div class="bg-decor bg-stars"></div>
+                <div class="bg-decor bg-mandala"></div>
+                <div class="bg-decor bg-lotus"></div>
 
-                <div class="summary-header">
-                    <div class="summary-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s-6-4-6-10a6 6 0 0 1 12 0c0 6-6 10-6 10z"></path>
-                        </svg>
-                    </div>
-                    <h2>Birth Details</h2>
-                    <p class="summary-subtitle"><span class="star">✦</span> Your Astrological Birth Information <span
-                            class="star">✦</span></p>
+                <div class="summary-header animate-row" style="animation-delay: 0.05s;">
+                    <h2 class="animated-title">Birth Details</h2>
+                    <p class="summary-subtitle">Your Astrological Birth Information</p>
                 </div>
 
-                <div class="summary-grid">
-                    <div class="summary-item">
-                        <div class="s-icon">📅</div>
-                        <div class="s-label">Birth Date</div>
-                        <div class="s-value">Thursday, November 19, 1976</div>
+                <div class="summary-grid premium-grid">
+                    <!-- Left Column -->
+                    <div class="grid-column left-column">
+                        <div class="summary-item animate-row" style="animation-delay: 0.13s;">
+                            <div class="s-icon-wrapper"><span class="s-icon">📅</span></div>
+                            <div class="s-text">
+                                <div class="s-label">Birth Date</div>
+                                <div class="s-value">Thursday, November 19, 1976</div>
+                            </div>
+                        </div>
+                        <div class="summary-item animate-row" style="animation-delay: 0.21s;">
+                            <div class="s-icon-wrapper"><span class="s-icon">🕒</span></div>
+                            <div class="s-text">
+                                <div class="s-label">Birth Time</div>
+                                <div class="s-value">12:12:17 PM</div>
+                            </div>
+                        </div>
+                        <div class="summary-item animate-row" style="animation-delay: 0.29s;">
+                            <div class="s-icon-wrapper"><span class="s-icon">📍</span></div>
+                            <div class="s-text">
+                                <div class="s-label">Birth Place / City</div>
+                                <div class="s-value">Chennai</div>
+                            </div>
+                        </div>
+                        <div class="summary-item animate-row" style="animation-delay: 0.37s;">
+                            <div class="s-icon-wrapper"><span class="s-icon">🏢</span></div>
+                            <div class="s-text">
+                                <div class="s-label">State</div>
+                                <div class="s-value">Tamil Nadu</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="summary-item">
-                        <div class="s-icon">🌐</div>
-                        <div class="s-label">Country</div>
-                        <div class="s-value">India</div>
-                    </div>
-                    <div class="summary-item">
-                        <div class="s-icon">🕒</div>
-                        <div class="s-label">Birth Time</div>
-                        <div class="s-value">12:12:17 PM</div>
-                    </div>
-                    <div class="summary-item">
-                        <div class="s-icon">🌙</div>
-                        <div class="s-label">Moon Sign</div>
-                        <div class="s-value">Virgo <span class="badge">♍</span></div>
-                    </div>
-                    <div class="summary-item">
-                        <div class="s-icon">📍</div>
-                        <div class="s-label">City</div>
-                        <div class="s-value">Chennai</div>
-                    </div>
-                    <div class="summary-item">
-                        <div class="s-icon">⭐</div>
-                        <div class="s-label">Birth Star</div>
-                        <div class="s-value">Hasta</div>
-                    </div>
-                    <div class="summary-item">
-                        <div class="s-icon">🏢</div>
-                        <div class="s-label">State</div>
-                        <div class="s-value">Tamil Nadu</div>
+
+                    <!-- Right Column -->
+                    <div class="grid-column right-column">
+                        <div class="summary-item animate-row" style="animation-delay: 0.45s;">
+                            <div class="s-icon-wrapper"><span class="s-icon">🌐</span></div>
+                            <div class="s-text">
+                                <div class="s-label">Country</div>
+                                <div class="s-value">India</div>
+                            </div>
+                        </div>
+                        <div class="summary-item animate-row" style="animation-delay: 0.53s;">
+                            <div class="s-icon-wrapper"><span class="s-icon">🌙</span></div>
+                            <div class="s-text">
+                                <div class="s-label">Moon Sign</div>
+                                <div class="s-value">Virgo <span class="badge">♍</span></div>
+                            </div>
+                        </div>
+                        <div class="summary-item animate-row" style="animation-delay: 0.61s;">
+                            <div class="s-icon-wrapper"><span class="s-icon">⭐</span></div>
+                            <div class="s-text">
+                                <div class="s-label">Birth Star</div>
+                                <div class="s-value">Hasta</div>
+                            </div>
+                        </div>
+                        <div class="summary-item animate-row" style="animation-delay: 0.69s;">
+                            <div class="s-icon-wrapper"><span class="s-icon">✨</span></div>
+                            <div class="s-text">
+                                <div class="s-label">Ascendant</div>
+                                <div class="s-value">Sagittarius</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 2. Main Result Card -->
-            <div class="result-card verdict-card">
-                <div class="verdict-card-inner">
-                    <div class="verdict-left">
-                        <div class="verdict-image-wrapper">
-                            <div class="pulse-ring"></div>
-                            <img src="images/god.png" alt="Couple Holding Hands" class="verdict-image">
-                            <div class="verified-shield">
+            <!-- 2. Premium Manglik Dosha Result Card -->
+            <div class="result-card premium-verdict-card animate-row" style="animation-delay: 0.8s;">
+                <!-- Subtle Background Layers -->
+                <div class="v-bg-zodiac"></div>
+                <div class="v-bg-mars"></div>
+                <div class="v-bg-mandala"></div>
+                <div class="v-bg-lotus"></div>
+                <div class="v-bg-particles"></div>
+
+                <div class="premium-verdict-inner">
+                    <!-- Left Section: Image -->
+                    <div class="p-verdict-left">
+                        <div class="p-verdict-image-wrapper">
+                            <div class="p-image-glow"></div>
+                            <div class="p-gold-frame">
+                                <img src="images/god.png" alt="Deity Illustration" class="p-verdict-image">
+                            </div>
+                            <div class="p-verified-badge float-anim">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
-                                    stroke-linejoin="round">
+                                    fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                             </div>
                         </div>
                     </div>
-                    <div class="verdict-right">
-                        <div class="verdict-badge"><span class="star">✦</span> Manglik Dosha Result <span
-                                class="star">✦</span></div>
-                        <h2 class="verdict-title">You are <span class="highlight-not">not</span> under the influence of
-                            Manglik Dosha</h2>
-                        <div class="verdict-divider">
-                            <span class="line"></span>
-                            <span class="symbol">𑁍</span>
-                            <span class="line"></span>
+
+                    <!-- Center Section: Text Analysis -->
+                    <div class="p-verdict-center">
+                        <div class="p-verdict-badge">Manglik Dosha Analysis</div>
+                        <h2 class="p-verdict-title">You are <span class="highlight-not-gradient">NOT</span> under the influence of Manglik Dosha</h2>
+                        <div class="p-verdict-divider">
+                            <span class="p-line"></span>
+                            <span class="p-symbol">✦</span>
+                            <span class="p-line"></span>
                         </div>
-                        <p class="verdict-description">According to your birth details,<br>Mars is not in a Manglik
-                            position.</p>
-                        <p class="verdict-description sub">Your horoscope indicates balanced planetary alignment.</p>
+                        <p class="p-verdict-desc">According to your birth chart, Mars does not create Manglik Dosha. Your planetary alignment is balanced and favorable.</p>
+                    </div>
+
+                    <!-- Right Section: Summary Cards -->
+                    <div class="p-verdict-right">
+                        <div class="p-mini-card">
+                            <div class="p-mc-icon">✅</div>
+                            <div class="p-mc-text">
+                                <div class="p-mc-label">Marriage Compatibility</div>
+                                <div class="p-mc-value">Excellent</div>
+                            </div>
+                        </div>
+                        <div class="p-mini-card">
+                            <div class="p-mc-icon">🟢</div>
+                            <div class="p-mc-text">
+                                <div class="p-mc-label">Mars Position</div>
+                                <div class="p-mc-value">Balanced</div>
+                            </div>
+                        </div>
+                        <div class="p-mini-card">
+                            <div class="p-mc-icon">🛡️</div>
+                            <div class="p-mc-text">
+                                <div class="p-mc-label">Overall Result</div>
+                                <div class="p-mc-value">Manglik Free</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Trust Footer Inside Verdict Card -->
-                <div class="verdict-trust-footer">
-                    <div class="trust-item"><span class="t-icon">🛡️</span> 100% Confidential</div>
-                    <div class="trust-line"></div>
-                    <div class="trust-item"><span class="t-icon">🔒</span> Secure & Private</div>
-                    <div class="trust-line"></div>
-                    <div class="trust-item"><span class="t-icon">✅</span> Trusted by Millions</div>
+                <!-- Bottom Section: Feature Badges -->
+                <div class="p-feature-badges">
+                    <div class="p-badge"><span class="pb-icon">✔</span> Marriage Friendly</div>
+                    <div class="p-badge"><span class="pb-icon">✔</span> Balanced Mars Energy</div>
+                    <div class="p-badge"><span class="pb-icon">✔</span> Positive Horoscope</div>
+                    <div class="p-badge"><span class="pb-icon">✔</span> Trusted Vedic Analysis</div>
                 </div>
-            </div>
 
-            <!-- 3. Bottom Stats Grid -->
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon check">✔</div>
-                    <h3>Marriage Friendly</h3>
-                    <p>High Compatibility</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon check">✔</div>
-                    <h3>Balanced Mars Energy</h3>
-                    <p>Positive Planetary Alignment</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon check">✔</div>
-                    <h3>No Major Manglik Effects</h3>
-                    <p>Peaceful Life Indications</p>
+                <!-- Footer Strip -->
+                <div class="p-verdict-footer">
+                    🔒 This report is generated using authentic Vedic astrology principles and your information remains completely confidential.
                 </div>
             </div>
         </div>

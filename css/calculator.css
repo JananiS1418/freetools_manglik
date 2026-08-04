@@ -380,40 +380,6 @@
     z-index: 0;
 }
 
-.card-corner {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(214,170,72,0.15)' stroke-width='1'%3E%3Cpath d='M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
-.card-corner.tl {
-    top: 15px;
-    left: 15px;
-}
-
-.card-corner.tr {
-    top: 15px;
-    right: 15px;
-    transform: rotate(90deg);
-}
-
-.card-corner.bl {
-    bottom: 15px;
-    left: 15px;
-    transform: rotate(-90deg);
-}
-
-.card-corner.br {
-    bottom: 15px;
-    right: 15px;
-    transform: rotate(180deg);
-}
-
-
 /* --- New Header Design --- */
 .calc-header.redesigned-header {
     text-align: center;
