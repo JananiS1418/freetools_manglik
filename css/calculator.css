@@ -1,0 +1,774 @@
+/* --- Hero Section - Premium Layout Iteration 2 --- */
+.hero-section {
+    background: #FFFDFB;
+    background-image:
+        /* Sacred Geometry / Mandala Layer */
+        url("data:image/svg+xml,%3Csvg width='1200' height='1200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='rgba(212, 175, 55, 0.05)' stroke-width='0.5' fill='none'%3E%3Ccircle cx='600' cy='600' r='500'/%3E%3Ccircle cx='600' cy='600' r='480' stroke-dasharray='4 4'/%3E%3Cpath d='M600 100 L1100 600 L600 1100 L100 600 Z'/%3E%3Ccircle cx='600' cy='600' r='350'/%3E%3C/g%3E%3C/svg%3E"),
+        /* Faded Zodiac wheel behind title */
+        url("data:image/svg+xml,%3Csvg width='800' height='800' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='400' cy='400' r='380' fill='none' stroke='rgba(212, 175, 55, 0.04)' stroke-width='1' stroke-dasharray='5 5'/%3E%3Ccircle cx='400' cy='400' r='300' fill='none' stroke='rgba(212, 175, 55, 0.03)' stroke-width='0.5'/%3E%3Cpath d='M400 20 L400 780 M20 400 L780 400' stroke='rgba(212, 175, 55, 0.02)' stroke-width='0.5'/%3E%3C/svg%3E"),
+        /* Constellation Lines */
+        url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M200 0 L200 400 M0 200 L400 200 M100 100 L300 300 M100 300 L300 100' stroke='rgba(212, 175, 55, 0.04)' stroke-width='0.5'/%3E%3Ccircle cx='200' cy='200' r='150' fill='none' stroke='rgba(212, 175, 55, 0.03)' stroke-width='0.5'/%3E%3Ccircle cx='200' cy='200' r='100' fill='none' stroke='rgba(212, 175, 55, 0.02)' stroke-width='0.5'/%3E%3C/svg%3E"),
+        /* Nebula & Radial Glows */
+        radial-gradient(circle at 50% 10%, rgba(255, 253, 245, 1) 0%, rgba(248, 245, 255, 0) 60%),
+        radial-gradient(circle at 20% 80%, rgba(248, 245, 255, 0.8) 0%, rgba(255, 253, 251, 0) 70%),
+        radial-gradient(circle at 80% 90%, rgba(248, 245, 255, 0.7) 0%, rgba(255, 253, 251, 0) 70%),
+        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.04) 0%, transparent 80%);
+    background-position: center center, center top, center, center, center, center, center;
+    background-blend-mode: multiply;
+    position: relative;
+    background-position: center center, center top, center, center, center, center, center;
+    background-blend-mode: multiply;
+    position: relative;
+    padding: 12px 15px 15px;
+    /* Further reduced banner height */
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #f1f5f9;
+    overflow: hidden;
+}
+
+/* Subtle glowing particles & stars over the whole bg */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(212, 175, 55, 0.1) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-header-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 10px;
+    /* Highly reduced bottom margin to eliminate empty vertical space */
+    position: relative;
+    z-index: 5;
+}
+
+.title-pill-badge {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #b48600;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-top: 5px;
+    /* Moved slightly up */
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    font-size: 64px;
+    font-weight: 700;
+    color: #2D205A;
+    margin: 0 0 10px;
+    font-family: 'Playfair Display', 'Cinzel', serif;
+    letter-spacing: 0.5px;
+    text-shadow: 0 4px 15px rgba(212, 175, 55, 0.2), 0 2px 5px rgba(45, 32, 90, 0.1);
+    position: relative;
+}
+
+.title-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.title-divider .line {
+    height: 1px;
+    width: 80px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+}
+
+.title-divider .symbol {
+    color: #d4af37;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.hero-container {
+    max-width: 1100px;
+    /* Increased width */
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    /* Ensure form card is always strictly above the header images */
+}
+
+/* --- Decorative Elements --- */
+.decor-star {
+    position: absolute;
+    color: rgba(212, 175, 55, 0.4);
+    animation: twinkle 4s infinite alternate;
+}
+
+.star-1 {
+    top: 15%;
+    left: 20%;
+    font-size: 24px;
+}
+
+.star-2 {
+    top: 25%;
+    right: 18%;
+    font-size: 18px;
+    animation-delay: 1s;
+}
+
+.star-3 {
+    bottom: 20%;
+    left: 30%;
+    font-size: 20px;
+    animation-delay: 2s;
+}
+
+.star-4 {
+    top: 30%;
+    left: 10%;
+    font-size: 14px;
+    animation-delay: 3s;
+}
+
+.star-5 {
+    bottom: 30%;
+    right: 10%;
+    font-size: 22px;
+    animation-delay: 1.5s;
+}
+
+.decor-lotus {
+    position: absolute;
+    top: 10%;
+    right: 35%;
+    opacity: 0.6;
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* --- Decorative Images & Ambience --- */
+
+/* Deity Ambient Bg */
+.deity-ambient-bg {
+    display: none;
+}
+
+/* Deity Image: Top Left */
+.hero-image-left {
+    position: absolute;
+    pointer-events: none;
+    left: -350px;
+    top: 10px;
+    /* Moved slightly downward */
+    width: 300px;
+    z-index: 2;
+}
+
+.god-img {
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Mars Ambient Bg */
+.mars-ambient-bg {
+    display: none;
+}
+
+/* Mars Image: Top Right */
+.hero-image-right {
+    position: absolute;
+    pointer-events: none;
+    right: -280px;
+    /* Pushed further outward to avoid text overlap */
+    top: 30px;
+    /* Aligned vertically with Deity */
+    width: 230px;
+    z-index: 2;
+}
+
+.planet-img {
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+    /* Removed drop-shadow to prevent outlining the rectangular image boundary */
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 68%, rgba(0, 0, 0, 0) 73%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 68%, rgba(0, 0, 0, 0) 73%);
+}
+
+/* Golden orbital rings for Mars */
+.hero-image-right::before,
+.hero-image-right::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px dashed rgba(212, 175, 55, 0.3);
+    animation: spin 30s linear infinite;
+    z-index: -1;
+}
+
+.hero-image-right::before {
+    width: 220px;
+    height: 220px;
+}
+
+.hero-image-right::after {
+    width: 280px;
+    height: 280px;
+    animation-direction: reverse;
+    border: 1px dotted rgba(212, 175, 55, 0.2);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* --- Glassmorphism Luxury Calculator Card --- */
+.calculator-card.luxury-card {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(214, 170, 72, 0.18);
+    border-radius: 32px;
+    box-shadow: 0 35px 80px rgba(42, 25, 90, 0.12);
+    padding: 24px 48px 32px 48px;
+    position: relative;
+    z-index: 10;
+    max-width: 100%;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Add subtle golden glow around the card */
+.calculator-card.luxury-card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, rgba(214, 170, 72, 0.2), transparent 50%, rgba(214, 170, 72, 0.1));
+    z-index: -1;
+    border-radius: 34px;
+    filter: blur(15px);
+}
+
+/* Background Inside Card */
+.card-bg-mandala {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M200 0 L200 400 M0 200 L400 200 M100 100 L300 300 M100 300 L300 100' stroke='rgba(214, 170, 72, 0.08)' stroke-width='1'/%3E%3Ccircle cx='200' cy='200' r='150' fill='none' stroke='rgba(214, 170, 72, 0.05)' stroke-width='1'/%3E%3C/svg%3E") no-repeat center center;
+    background-size: cover;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.card-bg-glow {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(214, 170, 72, 0.1) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.card-corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(214,170,72,0.15)' stroke-width='1'%3E%3Cpath d='M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.card-corner.tl {
+    top: 15px;
+    left: 15px;
+}
+
+.card-corner.tr {
+    top: 15px;
+    right: 15px;
+    transform: rotate(90deg);
+}
+
+.card-corner.bl {
+    bottom: 15px;
+    left: 15px;
+    transform: rotate(-90deg);
+}
+
+.card-corner.br {
+    bottom: 15px;
+    right: 15px;
+    transform: rotate(180deg);
+}
+
+
+/* Elegant Title inside Card */
+.calc-header.premium-header {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Reduced space below header */
+    position: relative;
+    z-index: 2;
+}
+
+.calc-header-title.shimmer-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a153a;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+.calc-header-title.shimmer-text::before,
+.calc-header-title.shimmer-text::after {
+    content: '';
+    height: 1px;
+    width: 60px;
+    /* Length of the golden line */
+    background: linear-gradient(90deg, transparent, rgba(214, 170, 72, 0.6), transparent);
+    margin: 0 5px;
+}
+
+.calc-header-title .star {
+    color: #d6aa48;
+    font-size: 16px;
+    animation: pulse 3s infinite;
+}
+
+.calc-header-title .icon {
+    font-size: 20px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* Form Layout */
+.calc-form.luxury-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Reduced vertical spacing */
+    position: relative;
+    z-index: 2;
+}
+
+.form-row-1 {
+    display: grid;
+    gap: 24px;
+    align-items: end;
+}
+
+.form-row-1 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.form-row-2 {
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+    /* Align all items to the bottom */
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3b306a;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.input-group.luxury-input {
+    display: flex;
+    gap: 12px;
+}
+
+.input-group.luxury-input select,
+.input-group.luxury-input input {
+    width: 100%;
+    height: 56px;
+    /* Increased height */
+    padding: 0 18px;
+    border: 1px solid rgba(214, 170, 72, 0.3);
+    /* Thin golden border */
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1e293b;
+    outline: none;
+    background-color: #FFFDFC;
+    /* Soft cream background */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.02);
+    /* Soft inner shadow */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    appearance: none;
+}
+
+.input-group.luxury-input select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23d6aa48' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+/* Premium Hover & Focus Effects */
+.input-group.luxury-input select:hover,
+.input-group.luxury-input input:hover {
+    border-color: #d6aa48;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(214, 170, 72, 0.08);
+    transform: translateY(-2px);
+}
+
+.input-group.luxury-input select:focus,
+.input-group.luxury-input input:focus {
+    border-color: #8A3DFF;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(138, 61, 255, 0.15), 0 0 15px rgba(214, 170, 72, 0.2);
+    transform: translateY(-2px);
+}
+
+.input-group.col-3 select {
+    width: calc(33.33% - 8px);
+}
+
+/* Action Box & Button */
+.action-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.btn-calculate.luxury-btn {
+    background: linear-gradient(135deg, #7A28FF 0%, #4D00D2 100%);
+    /* Purple to Royal Violet */
+    color: #ffffff;
+    border: 1px solid rgba(214, 170, 72, 0.5);
+    /* Golden border */
+    border-radius: 999px;
+    /* Full rounded */
+    padding: 0 40px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 35px rgba(77, 0, 210, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-calculate.luxury-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+    transform: rotate(45deg);
+    animation: buttonGlow 4s infinite alternate;
+}
+
+@keyframes buttonGlow {
+    0% {
+        transform: rotate(45deg) translateY(-20px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(45deg) translateY(20px);
+        opacity: 0;
+    }
+}
+
+.btn-calculate.luxury-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 45px rgba(77, 0, 210, 0.4), 0 0 30px rgba(214, 170, 72, 0.4);
+    background: linear-gradient(135deg, #8A3DFF 0%, #5E11E3 100%);
+}
+
+.btn-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    color: #d6aa48;
+}
+
+.btn-calculate.luxury-btn:hover .btn-arrow {
+    transform: translateX(8px);
+}
+
+/* Premium Privacy Block */
+.privacy-badge-premium {
+    display: flex;
+    align-items: center;
+    background: #FFFDFC;
+    /* Very soft cream/white */
+    border: 1px solid rgba(214, 170, 72, 0.2);
+    border-radius: 12px;
+    padding: 6px 10px;
+    /* Reduced space */
+    gap: 10px;
+    /* Reduced space */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    height: 56px;
+    /* Match height of input and button */
+    transition: all 0.3s ease;
+    /* For hover animation */
+    cursor: default;
+}
+
+.privacy-badge-premium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(92, 69, 255, 0.1);
+    border-color: rgba(92, 69, 255, 0.3);
+}
+
+.privacy-icon-wrapper {
+    background: #F3E8FF;
+    /* Soft purple bg for icon */
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5C45FF;
+    /* Deep purple icon color */
+}
+
+.privacy-text-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.3;
+}
+
+.privacy-title {
+    font-weight: 700;
+    color: #2D205A;
+    font-size: 13px;
+}
+
+.privacy-desc {
+    font-size: 11px;
+    color: #475569;
+    font-weight: 500;
+}
+
+/* Entrance Animations */
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.slide-up {
+    opacity: 0;
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Trust Indicators --- */
+.trust-indicators-container {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    padding: 0 20px;
+}
+
+.trust-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.trust-indicator svg {
+    color: #8A3DFF;
+    flex-shrink: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero-image-left {
+        left: 0px;
+        top: -40px;
+    }
+
+    .hero-image-right {
+        right: 0px;
+        top: -30px;
+    }
+
+    .form-row-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .privacy-group {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .hero-image-left,
+    .hero-image-right {
+        display: none;
+        /* Hide on smaller screens for clean layout */
+    }
+
+    .trust-indicators-container {
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .form-row-1,
+    .form-row-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .privacy-group {
+        grid-column: span 1;
+        height: auto;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .calculator-card {
+        padding: 24px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group.keep-row {
+        flex-direction: row;
+    }
+
+    .input-group.col-3 select {
+        width: 100%;
+    }
+}
