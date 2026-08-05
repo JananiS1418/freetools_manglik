@@ -1,10 +1,11 @@
 /* --- Manglik Dosha Result Section Styles --- */
 .result-section {
-    padding: 30px 0 100px 0;
+    padding: 0 0 100px 0; /* Removed top padding to fix gap */
     position: relative;
     font-family: 'Inter', sans-serif;
+    background-color: #FFFDFB;
     /* Subtle background elements for the section */
-    background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.03), transparent 60%);
+    background-image: radial-gradient(circle at top right, rgba(212, 175, 55, 0.03), transparent 60%);
 }
 
 .result-container {
@@ -108,12 +109,45 @@
 .summary-header h2.animated-title {
     font-size: 34px;
     color: #1e3a8a;
-    margin: 0 0 4px 0;
-    font-family: 'Poppins', sans-serif;
+    margin: 10px 0;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
-    letter-spacing: -0.5px;
+    font-size: 28px;
     display: inline-block;
-    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sh-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(216, 181, 106, 0.4);
+    border-radius: 50%;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(216, 181, 106, 0.1);
+}
+
+.sh-icon svg {
+    stroke: #d97706; /* warm gold/orange */
+}
+
+.sh-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.sh-line {
+    width: 40px;
+    height: 1px;
+    background: rgba(216, 181, 106, 0.5);
+}
+.sh-star {
+    color: #d97706;
+    font-size: 14px;
 }
 
 .premium-birth-card:hover .summary-header h2.animated-title {
@@ -134,37 +168,35 @@
 .premium-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0 30px;
-    /* Highly reduced gap between columns */
+    gap: 15px 30px;
     position: relative;
     z-index: 2;
-}
-
-.grid-column {
-    display: flex;
-    flex-direction: column;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 /* --- Row Items --- */
 .summary-item {
     display: flex;
     align-items: center;
-    padding: 12px 18px;
-    /* Compact padding */
-    margin-bottom: 10px;
-    /* Small gap instead of borders */
-    background: rgba(255, 255, 255, 0.5);
-    /* Subtle card background */
-    border: 1px solid rgba(216, 181, 106, 0.15);
-    /* Elegant border */
-    border-radius: 12px;
-    /* Rounded card style */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(0) scale(1);
+    padding: 12px 20px;
+    background: #ffffff;
+    border: 1px solid rgba(104, 104, 249, 0.08);
+    border-radius: 20px; /* Pill shaped */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
 }
 
-.summary-item:last-child {
-    margin-bottom: 0;
+.item-full-width {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: 410px; /* Exact size of one column */
+    justify-content: center; /* Center the icon and text together */
+}
+
+.item-full-width .s-text {
+    flex-grow: 0; /* Prevent text block from stretching away from icon */
 }
 
 /* Individual Row Hover Effects */
@@ -183,57 +215,42 @@
     justify-content: center;
     width: 36px;
     height: 36px;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(216, 181, 106, 0.15);
+    background: rgba(104, 104, 249, 0.05); /* Light purple circle */
     border-radius: 50%;
-    margin-right: 14px;
+    margin-right: 20px;
     flex-shrink: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
-    transition: all 0.3s ease;
-}
-
-.s-icon {
-    font-size: 16px;
-    transition: transform 0.3s ease;
-}
-
-.summary-item:hover .s-icon-wrapper {
-    box-shadow: 0 4px 12px rgba(216, 181, 106, 0.25);
-    background: #fff;
-    border-color: rgba(216, 181, 106, 0.4);
-}
-
-.summary-item:hover .s-icon {
-    transform: scale(1.15) rotate(5deg);
 }
 
 .s-text {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-grow: 1;
 }
 
 .s-label {
-    font-size: 15px;
-    color: #475569;
-    font-weight: 500;
+    font-size: 13px;
+    color: #1e293b;
+    font-weight: 600;
+    width: 90px;
+    flex-shrink: 0;
+}
+
+.s-colon {
+    color: #d97706; /* Goldish colon */
+    font-weight: 600;
+    margin: 0 15px;
 }
 
 .s-value {
-    font-size: 15px;
-    color: #1e293b;
-    font-weight: 600;
-    text-align: right;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 13px;
+    color: #475569;
+    font-weight: 500;
+    text-align: left;
     transition: color 0.3s ease;
 }
 
 .summary-item:hover .s-value {
-    color: #4A2C8C;
-    /* Premium purple on hover */
+    color: #6868f9;
 }
 
 .s-value .badge {
@@ -346,74 +363,39 @@
 
 /* 2. Premium Manglik Dosha Result Card */
 .premium-verdict-card {
-    background: linear-gradient(145deg, #FFFDF9 0%, #F6FFF5 100%);
-    border: 1px solid rgba(216, 181, 106, 0.4);
+    background: linear-gradient(145deg, #fefdf9 0%, #f4fbf4 100%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 32px;
-    box-shadow: 0 20px 60px rgba(31, 138, 77, 0.05),
-        inset 0 2px 0 rgba(255, 255, 255, 0.9);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
     position: relative;
     overflow: hidden;
     margin-top: 40px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
 }
 
 /* Subtle Background Layers */
 .v-bg-zodiac {
     position: absolute;
-    top: -100px;
-    left: -100px;
-    width: 400px;
-    height: 400px;
-    background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='200' cy='200' r='180' fill='none' stroke='%23D8B56A' stroke-width='2' stroke-dasharray='10 10'/%3E%3Ccircle cx='200' cy='200' r='140' fill='none' stroke='%23D8B56A' stroke-width='1'/%3E%3Cpath d='M200 20 L200 380 M20 200 L380 200' stroke='%23D8B56A' stroke-width='1'/%3E%3C/svg%3E");
-    background-size: cover;
-    opacity: 0.04;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.v-bg-mars {
-    position: absolute;
-    bottom: -80px;
-    right: -80px;
+    top: -50px;
+    left: -50px;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(31, 138, 77, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: 0;
-    pointer-events: none;
-    filter: blur(20px);
-}
-
-.v-bg-mandala {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 120%;
-    height: 120%;
-    background-image: radial-gradient(rgba(216, 181, 106, 0.05) 1px, transparent 1px);
-    background-size: 30px 30px;
+    background-image: url("data:image/svg+xml,%3Csvg width='300' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='150' cy='150' r='140' fill='none' stroke='%23D8B56A' stroke-width='1' stroke-dasharray='5 5'/%3E%3Cpath d='M150 10 L150 290 M10 150 L290 150' stroke='%23D8B56A' stroke-width='0.5'/%3E%3C/svg%3E");
+    background-size: cover;
+    opacity: 0.2;
     z-index: 0;
     pointer-events: none;
 }
 
-.v-bg-particles {
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle, rgba(216, 181, 106, 0.15) 1px, transparent 1px);
-    background-size: 100px 100px;
-    opacity: 0.5;
-    z-index: 0;
-    pointer-events: none;
+.v-bg-mars, .v-bg-mandala, .v-bg-lotus, .v-bg-particles {
+    display: none;
 }
 
 /* Inner Layout */
 .premium-verdict-inner {
     display: flex;
     align-items: center;
-    padding: 60px 50px 40px 50px;
-    gap: 40px;
+    padding: 60px 40px;
+    gap: 50px;
     position: relative;
     z-index: 2;
 }
@@ -425,14 +407,14 @@
 
 .p-verdict-image-wrapper {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
 }
 
 .p-image-glow {
     position: absolute;
-    inset: -20px;
-    background: radial-gradient(circle, rgba(31, 138, 77, 0.15) 0%, transparent 70%);
+    inset: -10px;
+    background: radial-gradient(circle, rgba(216, 181, 106, 0.2) 0%, transparent 70%);
     border-radius: 50%;
     z-index: 0;
 }
@@ -441,8 +423,8 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    padding: 6px;
-    background: linear-gradient(135deg, #D8B56A 0%, #FFFDF9 50%, #D8B56A 100%);
+    padding: 2px;
+    background: #D8B56A;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     position: relative;
     z-index: 1;
@@ -454,23 +436,23 @@
     border-radius: 50%;
     object-fit: cover;
     background: white;
-    border: 3px solid white;
+    border: 6px solid white;
 }
 
 .p-verified-badge {
     position: absolute;
-    bottom: 5px;
-    right: 5px;
-    width: 44px;
-    height: 44px;
-    background: linear-gradient(135deg, #1F8A4D, #22c55e);
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background: #22c55e;
     border: 3px solid white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 3;
-    box-shadow: 0 6px 12px rgba(31, 138, 77, 0.3);
+    box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
 }
 
 .float-anim {
@@ -501,10 +483,10 @@
     display: inline-flex;
     align-items: center;
     align-self: flex-start;
-    background: linear-gradient(135deg, rgba(216, 181, 106, 0.15), rgba(216, 181, 106, 0.05));
+    background: transparent;
     border: 1px solid rgba(216, 181, 106, 0.4);
     color: #b48600;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 1px;
     padding: 6px 16px;
@@ -523,11 +505,8 @@
 }
 
 .highlight-not-gradient {
-    background: linear-gradient(135deg, #1F8A4D, #22c55e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #22c55e;
     font-weight: 900;
-    font-size: 36px;
     display: inline-block;
     padding: 0 4px;
 }
@@ -542,20 +521,20 @@
 
 .p-verdict-divider .p-line {
     height: 1px;
-    width: 60px;
-    background: linear-gradient(90deg, transparent, rgba(216, 181, 106, 0.5), transparent);
+    width: 40px;
+    background: rgba(216, 181, 106, 0.5);
 }
 
 .p-verdict-divider .p-symbol {
     color: #D8B56A;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .p-verdict-desc {
-    font-size: 16px;
-    color: #475569;
+    font-size: 15px;
+    color: #64748b;
     line-height: 1.6;
-    margin: 0;
+    margin: 0 0 25px 0;
     max-width: 90%;
 }
 
@@ -565,15 +544,15 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    min-width: 260px;
+    min-width: 280px;
 }
 
 .p-mini-card {
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(255, 255, 255, 1);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
     border-radius: 16px;
-    padding: 12px 16px;
+    padding: 12px 20px;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -581,20 +560,36 @@
 }
 
 .p-mini-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(31, 138, 77, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
 .p-mc-icon {
-    font-size: 20px;
-    width: 36px;
-    height: 36px;
-    background: rgba(216, 181, 106, 0.1);
-    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+}
+
+.check-icon {
+    background: #22c55e;
+    border-radius: 6px;
+    color: white;
+}
+
+.circle-icon {
+    border: 2px solid #22c55e;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: inset 0 0 0 3px white;
+}
+
+.shield-icon {
+    background: #f1f5f9;
+    border-radius: 6px;
+    color: #ef4444;
 }
 
 .p-mc-text {
@@ -605,13 +600,13 @@
 
 .p-mc-label {
     font-size: 12px;
-    color: #64748b;
+    color: #94a3b8;
     font-weight: 500;
 }
 
 .p-mc-value {
-    font-size: 15px;
-    color: #1a1a2e;
+    font-size: 14px;
+    color: #0f172a;
     font-weight: 700;
 }
 
@@ -619,10 +614,9 @@
 .p-feature-badges {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 0 50px 30px 50px;
+    gap: 15px;
     position: relative;
     z-index: 2;
 }
@@ -652,23 +646,23 @@
     justify-content: center;
     width: 20px;
     height: 20px;
-    background: #1F8A4D;
+    background: #22c55e;
     color: white;
     border-radius: 50%;
-    font-size: 11px;
 }
 
 /* Footer Strip */
 .p-verdict-footer {
-    background: rgba(255, 255, 255, 0.6);
-    border-top: 1px solid rgba(216, 181, 106, 0.2);
+    background: transparent;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     text-align: center;
-    padding: 15px 20px;
+    padding: 20px 20px;
     font-size: 13px;
     color: #64748b;
     font-weight: 500;
     position: relative;
     z-index: 2;
+    margin-top: 20px;
 }
 
 /* Animations Triggered by JS */
