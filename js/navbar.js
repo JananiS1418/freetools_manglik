@@ -38,3 +38,31 @@ drawerDropdowns.forEach(link => {
         }
     });
 });
+// Dropdown Search Bar Logic
+const desktopSearchBtn = document.getElementById('desktopSearchBtn');
+const mobileSearchBtn = document.getElementById('mobileSearchBtn');
+const dropdownSearchBar = document.getElementById('dropdownSearchBar');
+const closeDropdownSearchBtn = document.getElementById('closeDropdownSearchBtn');
+const dropdownSearchInput = document.getElementById('dropdownSearchInput');
+
+function openSearch(e) {
+    e.preventDefault();
+    dropdownSearchBar.classList.add('active');
+    setTimeout(() => dropdownSearchInput.focus(), 100);
+}
+
+function closeSearch() {
+    dropdownSearchBar.classList.remove('active');
+    dropdownSearchInput.value = '';
+}
+
+if (desktopSearchBtn) desktopSearchBtn.addEventListener('click', openSearch);
+if (mobileSearchBtn) mobileSearchBtn.addEventListener('click', openSearch);
+if (closeDropdownSearchBtn) closeDropdownSearchBtn.addEventListener('click', closeSearch);
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && dropdownSearchBar && dropdownSearchBar.classList.contains('active')) {
+        closeSearch();
+    }
+});

@@ -75,11 +75,10 @@ body {
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     transition: color 0.2s ease;
     gap: 4px;
     position: relative;
-    /* Fixed floating NEW badge */
-    /* Removed white-space: nowrap to allow wrapping into two lines! */
 }
 
 .nav-item>a:hover {
@@ -250,123 +249,43 @@ body {
     transform: translateY(-50%) translateX(0);
 }
 
-/* --- Right: Desktop Search & Info --- */
-.right-actions {
+/* --- Right: Premium Icon Dock (Desktop) --- */
+.premium-icon-dock {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     flex-shrink: 0;
+    padding-left: 20px;
+    border-left: 1px solid #e2e8f0;
 }
 
-/* Removed media query that hid info items on smaller screens, as it's no longer needed! */
-
-/* Search Box - Restored Original Behavior */
-.search-wrapper {
-    position: relative;
+.dock-icon {
     display: flex;
     align-items: center;
-    width: 85px;
-    /* Default collapsed width */
-    height: 34px;
-    border: 1px solid transparent;
-    border-radius: 20px;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     background-color: transparent;
-    transition: all 0.4s ease;
-    overflow: hidden;
-}
-
-.search-wrapper:focus-within {
-    width: 200px;
-    border-color: #5C45FF;
-    background-color: #ffffff;
-}
-
-.search-icon {
-    margin-left: 12px;
-    margin-right: 6px;
-    flex-shrink: 0;
     color: #1e3a8a;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
-.search-text {
-    font-size: 14px;
-    font-weight: 600;
-    color: #1e3a8a;
-    transition: opacity 0.2s;
+.dock-icon:hover {
+    background-color: rgba(92, 69, 255, 0.08);
+    color: #5C45FF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(92, 69, 255, 0.1);
 }
 
-.search-divider {
-    width: 1px;
-    height: 18px;
-    background-color: #cbd5e1;
-    margin-right: 8px;
-    opacity: 0;
-    width: 0;
-    margin: 0;
-    transition: all 0.2s ease;
+.dock-icon svg {
+    transition: transform 0.3s ease;
 }
 
-.search-input {
-    border: none;
-    background: transparent;
-    font-size: 13px;
-    color: #1e3a8a;
-    outline: none;
-    width: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.search-input::placeholder {
-    color: #9ca3af;
-}
-
-/* On Focus Changes */
-.search-wrapper:focus-within {
-    cursor: text;
-}
-
-.search-wrapper:focus-within .search-text {
-    display: none;
-}
-
-.search-wrapper:focus-within .search-divider {
-    opacity: 1;
-    width: 1px;
-    margin-right: 8px;
-}
-
-.search-wrapper:focus-within .search-input {
-    width: 100%;
-    opacity: 1;
-    pointer-events: auto;
-    flex-grow: 1;
-}
-
-
-
-/* Action Divider */
-.action-divider {
-    width: 1px;
-    height: 20px;
-    background-color: #e2e8f0;
-}
-
-/* Info Items (Location & Date) */
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #1e3a8a;
-    /* Dark Blue text */
-    font-size: 13px;
-    font-weight: 500;
-}
-
-.info-item svg {
-    color: #1e3a8a;
-    opacity: 0.8;
+.dock-icon:hover svg {
+    transform: scale(1.15);
 }
 
 /* Responsive constraints & Tablet/Mobile Actions */
@@ -376,19 +295,16 @@ body {
 
 @media (max-width: 1450px) {
     .nav-list {
-        gap: 10px;
-    }
-
-    .search-wrapper {
-        width: 160px;
+        gap: 12px;
     }
 
     .navbar-container {
         padding: 0 15px;
     }
-
-    .right-actions {
-        gap: 12px;
+    
+    .premium-icon-dock {
+        gap: 8px;
+        padding-left: 10px;
     }
 
     .info-item {
@@ -486,6 +402,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        gap: 15px;
         flex-grow: 1;
         /* Allow taking up space between logo and right side */
         min-width: 0;
@@ -834,4 +751,84 @@ body {
 
 .drawer-account-btn:hover {
     background-color: #4f46e5;
+}
+
+/* ==========================================================================
+   DROPDOWN SEARCH BAR
+   ========================================================================== */
+.site-header {
+    position: relative;
+    z-index: 1000;
+}
+
+.dropdown-search-bar {
+    position: absolute;
+    top: calc(100% - 5px); /* Just overlapping the bottom of the header */
+    right: 20px; /* Anchored to the right */
+    left: auto;
+    width: 320px;
+    background: #ffffff;
+    border: 2px solid #e0e7ff; /* Light purple border like screenshot */
+    border-radius: 30px; /* Pill shape */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1050; /* High z-index to float above banner */
+    display: flex;
+    justify-content: center;
+    padding: 6px 18px; /* Thinner padding */
+}
+
+.dropdown-search-bar.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-bar-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+
+.dropdown-search-icon {
+    color: #475569; /* Darker gray for icon */
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.dropdown-search-input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    font-size: 15px; /* Slightly smaller */
+    color: #475569;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-search-input::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+.close-dropdown-search {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.close-dropdown-search:hover {
+    color: #5C45FF;
+    transform: rotate(90deg);
 }

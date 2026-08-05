@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astropedia - Ultra Wide Single Line Navbar</title>
     <link rel="icon" type="image/png" href="images/Fav-Icon.png">
-    <!-- Modern Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Modern Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/calculator.css">
     <link rel="stylesheet" href="css/result.css">
@@ -124,60 +124,44 @@
                 </ul>
             </nav>
 
-            <!-- Right: Search, Location, Date (Desktop) -->
-            <div class="right-actions desktop-only">
+            <!-- Right: Premium Icon Dock (Desktop) -->
+            <div class="right-actions desktop-only premium-icon-dock">
                 <!-- Search -->
-                <label class="search-wrapper">
-                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
+                <a href="#" class="dock-icon" id="desktopSearchBtn" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <span class="search-text">Search</span>
-                    <div class="search-divider"></div>
-                    <input type="text" placeholder="Type to search..." class="search-input">
-                </label>
-
-                <div class="action-divider"></div>
+                </a>
 
                 <!-- Location -->
-                <div class="info-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="#" class="dock-icon" title="Location: Chennai, IN">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                         <circle cx="12" cy="10" r="3"></circle>
                     </svg>
-                    <span>Chennai, India</span>
-                </div>
-
-                <div class="action-divider"></div>
+                </a>
 
                 <!-- Date -->
-                <div class="info-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="#" class="dock-icon" title="Today's Date: 04 Aug '26">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                         <line x1="16" y1="2" x2="16" y2="6"></line>
                         <line x1="8" y1="2" x2="8" y2="6"></line>
                         <line x1="3" y1="10" x2="21" y2="10"></line>
                     </svg>
-                    <span>04 August 2026</span>
-                </div>
+                </a>
             </div>
 
             <!-- Tablet/Mobile Actions -->
             <div class="mobile-actions">
                 <!-- Mobile Search -->
-                <div class="mobile-search-wrapper">
-                    <svg class="m-search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
+                <a href="#" class="m-search-btn" id="mobileSearchBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="text" placeholder="Search..." class="m-search-input">
-                </div>
+                </a>
 
                 <button class="hamburger-btn" id="menuToggle">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
@@ -185,6 +169,23 @@
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                         <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Dropdown Search Bar -->
+        <div id="dropdownSearchBar" class="dropdown-search-bar">
+            <div class="search-bar-container">
+                <svg class="dropdown-search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="dropdownSearchInput" class="dropdown-search-input" placeholder="Search AstroVed...">
+                <button id="closeDropdownSearchBtn" class="close-dropdown-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
             </div>
@@ -343,41 +344,35 @@
 
         <!-- Center Content: Title and Subtitle -->
         <div class="hero-header-content">
-            <!-- Deity Area Background & Image -->
-            <div class="deity-ambient-bg"></div>
-            <div class="hero-image-left">
-                <img src="images/god.png" alt="Lord Mangal" class="god-img">
+            <div class="title-pill-badge">
+                <span class="pill-star">✦</span> FREE ASTROLOGY TOOL <span class="pill-star">✦</span>
             </div>
-
-            <!-- Mars Area Background & Image -->
-            <div class="mars-ambient-bg"></div>
-            <div class="hero-image-right">
-                <img src="images/planet.png" alt="Mars Planet" class="planet-img">
-            </div>
-
-            <div class="title-pill-badge">✦ FREE ASTROLOGY TOOL ✦</div>
-            <h1 class="hero-title">Manglik Dosha Calculator</h1>
+            <h1 class="hero-title">
+                <span class="dark-text">Manglik Dosha</span>
+                <span class="gold-text">Calculator</span>
+            </h1>
             <div class="title-divider">
                 <span class="line"></span>
-                <span class="symbol">𑁍</span>
+                <span class="symbol">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(92, 69, 255, 0.6)" stroke-width="1">
+                        <path d="M12 2v20m10-10H2m17.07-7.07L4.93 19.07m14.14 0L4.93 4.93"></path>
+                        <circle cx="12" cy="12" r="3" fill="rgba(92, 69, 255, 0.1)"></circle>
+                    </svg>
+                </span>
                 <span class="line"></span>
             </div>
-            <p class="hero-subtitle">Discover whether Mars (Mangala) influences your marriage, relationships, and life
-                through authentic Vedic astrology insights.</p>
+            <p class="hero-subtitle">Discover whether Mars (Mangala) influences your marriage and life through authentic Vedic astrology.</p>
         </div>
 
         <div class="container hero-container">
 
             <!-- Calculator Card -->
             <div class="calculator-card luxury-card fade-in">
-                <!-- Premium Background Watermarks inside card -->
-                <div class="card-bg-mandala"></div>
-                <div class="card-bg-glow"></div>
-
+                
                 <div class="calc-header redesigned-header">
                     <div class="header-main-title">
                         <div class="header-user-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C45FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C45FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                         </div>
                         <h2>Enter Your Birth Details</h2>
                     </div>
@@ -387,40 +382,75 @@
                 <form id="calcForm" class="calc-form luxury-form new-design-form">
                     <div class="calc-form-grid">
                         <!-- Birth Date -->
-                        <div class="form-group slide-up">
+                        <div class="form-group field-box slide-up">
                             <label class="icon-label">
                                 <div class="label-icon-box">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C45FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5C45FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                                 </div>
                                 <span>Birth Date</span>
                             </label>
-                            <div class="input-group col-3 keep-row luxury-input">
-                                <select><option>Day</option></select>
-                                <select><option>Month</option></select>
-                                <select><option>Year</option></select>
+                            <div class="input-group col-3 luxury-input">
+                                <select>
+                                    <option value="" disabled selected hidden>Day</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select>
+                                    <option value="" disabled selected hidden>Month</option>
+                                    <option>January</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                </select>
+                                <select>
+                                    <option value="" disabled selected hidden>Year</option>
+                                    <option>1990</option>
+                                    <option>1991</option>
+                                    <option>1992</option>
+                                </select>
                             </div>
                         </div>
 
                         <!-- Birth Time -->
-                        <div class="form-group slide-up" style="animation-delay: 0.1s;">
+                        <div class="form-group field-box slide-up" style="animation-delay: 0.1s;">
                             <label class="icon-label">
                                 <div class="label-icon-box">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C45FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5C45FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                                 </div>
                                 <span>Birth Time</span>
                             </label>
-                            <div class="input-group col-3 keep-row luxury-input">
-                                <select><option>Hour</option></select>
-                                <select><option>Minute</option></select>
-                                <select><option>AM/PM</option></select>
+                            <div class="input-group col-4 luxury-input">
+                                <select>
+                                    <option value="" disabled selected hidden>Hour</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select>
+                                    <option value="" disabled selected hidden>Minute</option>
+                                    <option>00</option>
+                                    <option>15</option>
+                                    <option>30</option>
+                                </select>
+                                <select>
+                                    <option value="" disabled selected hidden>Second</option>
+                                    <option>00</option>
+                                    <option>15</option>
+                                    <option>30</option>
+                                </select>
+                                <select>
+                                    <option value="" disabled selected hidden>AM/PM</option>
+                                    <option>AM</option>
+                                    <option>PM</option>
+                                </select>
                             </div>
                         </div>
 
                         <!-- Birth Country -->
-                        <div class="form-group slide-up birth-country-group" style="animation-delay: 0.2s;">
+                        <div class="form-group field-box birth-country-group slide-up" style="animation-delay: 0.2s;">
                             <label class="icon-label">
                                 <div class="label-icon-box">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C45FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5C45FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                                 </div>
                                 <span>Birth Country</span>
                             </label>
@@ -432,12 +462,12 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <!-- Birth Place -->
-                        <div class="form-group slide-up birth-city-group full-width" style="animation-delay: 0.3s;">
+                        <div class="form-group field-box birth-city-group full-width slide-up" style="animation-delay: 0.3s;">
                             <label class="icon-label">
                                 <div class="label-icon-box">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C45FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5C45FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                 </div>
                                 <span>Birth Place / City</span>
                             </label>
@@ -445,16 +475,16 @@
                                 <input type="text" placeholder="Enter Birth Place / City">
                             </div>
                         </div>
-
-                        <!-- Action Button -->
-                        <div class="form-group action-group full-width slide-up" style="animation-delay: 0.4s;">
-                            <button type="submit" id="calcBtn" class="btn-calculate luxury-btn new-design-btn">
-                                <div class="btn-icon-left">
+                        
+                        <!-- Action Button and Secure Text -->
+                        <div class="form-group action-container full-width slide-up" style="animation-delay: 0.4s;">
+                            <div class="submit-wrapper">
+                                <button type="submit" id="calcBtn" class="btn-calculate luxury-btn new-design-btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
-                                </div>
-                                <span>Calculate Manglik Dosha</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                            </button>
+                                    <span>Calculate Manglik Dosha</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -631,6 +661,6 @@
         </div>
     </section>
 
+    <!-- Scripts -->
 </body>
-
 </html>
