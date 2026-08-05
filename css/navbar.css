@@ -301,7 +301,7 @@ body {
     .navbar-container {
         padding: 0 15px;
     }
-    
+
     .premium-icon-dock {
         gap: 8px;
         padding-left: 10px;
@@ -763,22 +763,28 @@ body {
 
 .dropdown-search-bar {
     position: absolute;
-    top: calc(100% - 5px); /* Just overlapping the bottom of the header */
-    right: 20px; /* Anchored to the right */
+    top: calc(100% - 5px);
+    /* Just overlapping the bottom of the header */
+    right: 20px;
+    /* Anchored to the right */
     left: auto;
     width: 320px;
     background: #ffffff;
-    border: 2px solid #e0e7ff; /* Light purple border like screenshot */
-    border-radius: 30px; /* Pill shape */
+    border: 2px solid #e0e7ff;
+    /* Light purple border like screenshot */
+    border-radius: 30px;
+    /* Pill shape */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     transform: translateY(-10px);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1050; /* High z-index to float above banner */
+    z-index: 1050;
+    /* High z-index to float above banner */
     display: flex;
     justify-content: center;
-    padding: 6px 18px; /* Thinner padding */
+    padding: 6px 18px;
+    /* Thinner padding */
 }
 
 .dropdown-search-bar.active {
@@ -795,7 +801,8 @@ body {
 }
 
 .dropdown-search-icon {
-    color: #475569; /* Darker gray for icon */
+    color: #475569;
+    /* Darker gray for icon */
     margin-right: 12px;
     flex-shrink: 0;
 }
@@ -804,7 +811,8 @@ body {
     flex-grow: 1;
     border: none;
     background: transparent;
-    font-size: 15px; /* Slightly smaller */
+    font-size: 15px;
+    /* Slightly smaller */
     color: #475569;
     outline: none;
     font-family: 'Poppins', sans-serif;

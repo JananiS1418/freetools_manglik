@@ -1,0 +1,284 @@
+/* ============================================================== */
+/* --- Guidance & Remedies Section (3 Cards) ---                  */
+/* ============================================================== */
+.guidance-section {
+    padding: 10px 0 20px; /* Reduced bottom padding */
+    position: relative;
+    z-index: 5;
+    background-color: #FFFDFB;
+}
+
+.guidance-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    /* Reduced to bring title closer */
+    opacity: 0.8;
+}
+
+.guidance-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.guidance-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.brand-color-text {
+    color: #6868f9 !important;
+}
+
+.guidance-header p {
+    font-size: 15px;
+    color: #555555;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.guidance-divider .g-line {
+    height: 1px;
+    width: 150px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+}
+
+.guidance-divider .g-icon svg {
+    filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+}
+
+.guidance-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.g-card {
+    position: relative;
+    border-radius: 20px;
+    padding: 25px 20px;
+    /* Reduced from 40px 30px */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+}
+
+.g-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* Background Mandala Decoration */
+.g-bg-decor {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 150px;
+    height: 150px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="48" stroke="rgba(0,0,0,0.03)" stroke-width="1"/><path d="M50 2L50 98M2 50L98 50" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: -1;
+    transition: transform 0.6s ease;
+}
+
+.g-card:hover .g-bg-decor {
+    transform: rotate(45deg) scale(1.1);
+}
+
+/* Icon Styles */
+.g-icon-wrapper {
+    width: 60px;
+    /* Reduced from 70px */
+    height: 60px;
+    /* Reduced from 70px */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    /* Reduced from 25px */
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.g-card:hover .g-icon-wrapper {
+    transform: scale(1.1);
+}
+
+.g-icon-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    /* Adjusted for smaller icon */
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: -1;
+}
+
+.g-icon-wrapper svg {
+    width: 28px;
+    /* Reduced from 32px */
+    height: 28px;
+    /* Reduced from 32px */
+}
+
+/* Typography */
+.g-title {
+    font-size: 18px;
+    /* Reduced from 20px */
+    font-weight: 700;
+    margin-bottom: 10px;
+    /* Reduced from 15px */
+    color: #1a1a1a;
+}
+
+.g-desc {
+    font-size: 14px;
+    /* Reduced from 15px */
+    line-height: 1.5;
+    color: #555555;
+    margin-bottom: 20px;
+    /* Reduced from 35px */
+    flex-grow: 1;
+}
+
+/* Buttons */
+.g-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    /* Reduced from 14px 24px */
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.g-btn span {
+    transition: transform 0.3s ease;
+}
+
+.g-card:hover .g-btn span {
+    transform: translateX(5px);
+}
+
+/* Theme Colors */
+/* 1. Purple Theme */
+.purple-theme {
+    background: linear-gradient(180deg, rgba(243, 232, 255, 0.4) 0%, rgba(255, 255, 255, 1) 100%);
+    border-color: rgba(147, 51, 234, 0.1);
+}
+
+.purple-theme .g-icon-wrapper svg {
+    color: #5B21B6;
+}
+
+.purple-theme .g-title {
+    color: #4C1D95;
+}
+
+.purple-theme .g-btn {
+    background: #6D28D9;
+    box-shadow: 0 6px 15px rgba(109, 40, 217, 0.3);
+}
+
+.purple-theme .g-btn:hover {
+    background: #5B21B6;
+    box-shadow: 0 8px 20px rgba(109, 40, 217, 0.4);
+}
+
+/* 2. Orange Theme */
+.orange-theme {
+    background: linear-gradient(180deg, rgba(254, 243, 199, 0.4) 0%, rgba(255, 255, 255, 1) 100%);
+    border-color: rgba(234, 88, 12, 0.1);
+}
+
+.orange-theme .g-icon-wrapper svg {
+    color: #C2410C;
+}
+
+.orange-theme .g-title {
+    color: #9A3412;
+}
+
+.orange-theme .g-btn {
+    background: #EA580C;
+    box-shadow: 0 6px 15px rgba(234, 88, 12, 0.3);
+}
+
+.orange-theme .g-btn:hover {
+    background: #C2410C;
+    box-shadow: 0 8px 20px rgba(234, 88, 12, 0.4);
+}
+
+/* 3. Blue Theme */
+.blue-theme {
+    background: linear-gradient(180deg, rgba(219, 234, 254, 0.4) 0%, rgba(255, 255, 255, 1) 100%);
+    border-color: rgba(37, 99, 235, 0.1);
+}
+
+.blue-theme .g-icon-wrapper svg {
+    color: #1D4ED8;
+}
+
+.blue-theme .g-title {
+    color: #1E3A8A;
+}
+
+.blue-theme .g-btn {
+    background: #2563EB;
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+}
+
+.blue-theme .g-btn:hover {
+    background: #1D4ED8;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .guidance-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .guidance-container .g-card:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 767px) {
+    .guidance-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

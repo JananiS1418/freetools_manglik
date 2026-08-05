@@ -1,0 +1,233 @@
+.footer-section {
+    background: linear-gradient(to right, #fdfaf3, #f1e9dc);
+    color: #4a4d56;
+    padding: 1.5rem 0 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.footer-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1fr 1fr 1.2fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Headings */
+.footer-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #111;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 24px;
+    height: 2px;
+    background: #6868f9;
+    border-radius: 2px;
+}
+
+/* Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+    color: #4a4d56;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-links a:hover {
+    color: #6868f9;
+    padding-left: 4px;
+}
+
+/* App Download */
+.app-download-section {
+    margin-top: 0;
+}
+
+.app-download-heading {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 1rem;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.app-btn {
+    display: inline-flex;
+    height: 40px;
+    border: 1px solid #c2c2f0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    padding: 5px 12px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    font-size: 0.85rem;
+    gap: 6px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(104,104,249,0.15);
+    border-color: #6868f9;
+}
+
+/* Connect Info */
+.connect-info {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    color: #4a4d56;
+    line-height: 1.4;
+}
+
+.connect-info p {
+    margin: 0 0 0.3rem 0;
+}
+
+.connect-info a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.connect-info a:hover {
+    color: #6868f9;
+}
+
+.connect-info strong {
+    color: #111;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* Bottom Features Row */
+.bottom-features-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.badges-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.trust-badge-img {
+    height: 45px;
+    object-fit: contain;
+}
+
+/* Bottom Bar */
+.footer-bottom-bar {
+    background: #6868f9;
+    color: #fff;
+    padding: 1.5rem 0;
+}
+
+.bottom-bar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.social-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-wrapper span {
+    font-size: 0.9rem;
+    margin-right: 8px;
+}
+
+.social-icon {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .bottom-features-row {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    .bottom-bar-inner {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    .badges-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
