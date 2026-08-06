@@ -865,7 +865,7 @@
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .manglik-result-inner {
         flex-direction: column;
         gap: 25px;

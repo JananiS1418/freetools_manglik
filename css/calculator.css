@@ -970,6 +970,20 @@ html, body {
         grid-column: span 2 !important;
         justify-self: center;
     }
+
+    /* 2x2 grid for Birth Time on iPad/Mobile to prevent text overlap */
+    .input-group.col-4 {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px;
+    }
+
+    .input-group.col-4 select {
+        width: 100%;
+        padding-left: 8px;
+        padding-right: 20px;
+        font-size: 13px;
+    }
 }
 
 
