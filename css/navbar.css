@@ -103,34 +103,35 @@ body {
 
 /* "New" Badge - Premium Bright Design */
 .badge-new {
+    display: inline-block;
+    vertical-align: middle;
     background: #ffffff;
     color: #D4AF37;
     border: 1px solid #D4AF37;
-    font-size: 10px;
-    font-weight: 800;
+    font-size: 11px; /* Slightly larger */
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    padding: 3px 8px;
+    padding: 4px 10px; /* Better inner spacing */
     border-radius: 12px;
-    margin-left: 6px;
+    margin-left: 12px; /* Definite gap from text */
     position: relative;
     top: -1px;
+    animation: newBadgePulse 2s infinite; /* Added animation! */
 }
 
 @keyframes newBadgePulse {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 0, 85, 0.4);
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
     }
-
     70% {
-        transform: scale(1.08);
-        box-shadow: 0 0 0 6px rgba(255, 0, 85, 0);
+        transform: scale(1.05);
+        box-shadow: 0 0 0 6px rgba(212, 175, 55, 0);
     }
-
     100% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 0, 85, 0);
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
     }
 }
 

@@ -77,9 +77,9 @@ html, body {
     background-repeat: no-repeat;
     background-color: #FFFDFB;
     position: relative;
-    padding: 12px 15px 0px; /* Reduced bottom padding */
+    padding: 12px 15px 60px; /* Added 60px bottom padding so the calculator card shadow isn't cut off */
     font-family: 'Inter', sans-serif;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: none; /* Removed the hard border to blend backgrounds perfectly */
     overflow: hidden;
 }
 
