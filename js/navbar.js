@@ -66,3 +66,44 @@ document.addEventListener('keydown', (e) => {
         closeSearch();
     }
 });
+
+// Dock Popups Logic
+const locationBtn = document.getElementById('locationBtn');
+const locationDropdown = document.getElementById('locationDropdown');
+const dateBtn = document.getElementById('dateBtn');
+const dateDropdown = document.getElementById('dateDropdown');
+
+function closeAllDockPopups() {
+    if (locationDropdown) locationDropdown.classList.remove('active');
+    if (dateDropdown) dateDropdown.classList.remove('active');
+}
+
+if (locationBtn && locationDropdown) {
+    locationBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isActive = locationDropdown.classList.contains('active');
+        closeAllDockPopups();
+        if (!isActive) locationDropdown.classList.add('active');
+    });
+}
+
+if (dateBtn && dateDropdown) {
+    dateBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isActive = dateDropdown.classList.contains('active');
+        closeAllDockPopups();
+        if (!isActive) dateDropdown.classList.add('active');
+    });
+}
+
+// Close popups when clicking anywhere outside
+document.addEventListener('click', (e) => {
+    if (locationDropdown && locationDropdown.classList.contains('active') && !locationBtn.contains(e.target) && !locationDropdown.contains(e.target)) {
+        locationDropdown.classList.remove('active');
+    }
+    if (dateDropdown && dateDropdown.classList.contains('active') && !dateBtn.contains(e.target) && !dateDropdown.contains(e.target)) {
+        dateDropdown.classList.remove('active');
+    }
+});

@@ -126,16 +126,17 @@ html, body {
 
 .title-pill-badge {
     display: inline-block;
-    background: rgba(92, 69, 255, 0.1);
-    border: 1px solid rgba(92, 69, 255, 0.4);
-    color: #4C35E6;
-    font-size: 11px;
-    font-weight: 700;
+    background: #ffffff;
+    border: 1px solid rgba(74, 44, 140, 0.3);
+    color: #4A2C8C;
+    font-size: 12px;
+    font-weight: 800;
     letter-spacing: 1.5px;
-    padding: 6px 16px;
+    padding: 8px 18px;
     border-radius: 30px;
     margin-top: 5px;
     margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(74, 44, 140, 0.1);
     animation: floatBadge 4s ease-in-out infinite, fadeInUpHeader 0.8s ease-out forwards;
 }
 
@@ -145,7 +146,7 @@ html, body {
 }
 
 .hero-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 48px;
     font-weight: 700;
     color: rgb(45, 32, 90);
@@ -499,11 +500,11 @@ html, body {
 }
 
 .header-main-title h2 {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 700;
     color: #1a153a;
     font-family: 'Playfair Display', serif;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     margin: 0;
 }
 

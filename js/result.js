@@ -31,6 +31,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 calcBtn.innerHTML = originalText;
                 calcBtn.disabled = false;
 
+                // Randomly choose result (50% chance)
+                const isManglik = Math.random() < 0.5;
+                const positiveCard = document.getElementById('manglikPositiveCard');
+                const negativeCard = document.getElementById('manglikNegativeCard');
+                
+                if (positiveCard && negativeCard) {
+                    if (isManglik) {
+                        positiveCard.style.display = 'block';
+                        negativeCard.style.display = 'none';
+                    } else {
+                        positiveCard.style.display = 'none';
+                        negativeCard.style.display = 'block';
+                    }
+                }
+
                 // Show the section
                 resultSection.style.display = 'block';
 
@@ -48,7 +63,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     const cards = resultSection.querySelectorAll('.result-card, .stats-grid');
                     cards.forEach(card => card.classList.add('fade-up-anim'));
                     
-                    createConfetti();
+                    // Only show confetti if it's a good result
+                    if (!isManglik) {
+                        createConfetti();
+                    }
                 }, 200);
 
             }, 1000); // Wait 1 second before showing results

@@ -75,7 +75,7 @@ body {
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     transition: color 0.2s ease;
     gap: 4px;
     position: relative;
@@ -103,8 +103,9 @@ body {
 
 /* "New" Badge - Premium Bright Design */
 .badge-new {
-    background: linear-gradient(135deg, #FF0055 0%, #FF8C00 100%);
-    color: #ffffff;
+    background: #ffffff;
+    color: #D4AF37;
+    border: 1px solid #D4AF37;
     font-size: 10px;
     font-weight: 800;
     text-transform: uppercase;
@@ -113,9 +114,7 @@ body {
     border-radius: 12px;
     margin-left: 6px;
     position: relative;
-    top: -8px;
-    box-shadow: 0 3px 8px rgba(255, 0, 85, 0.35);
-    animation: newBadgePulse 2s infinite ease-in-out;
+    top: -1px;
 }
 
 @keyframes newBadgePulse {
@@ -263,9 +262,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
+    border: 1px solid rgba(92, 69, 255, 0.3);
     background-color: transparent;
     color: #1e3a8a;
     text-decoration: none;
@@ -278,6 +278,164 @@ body {
     color: #5C45FF;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(92, 69, 255, 0.1);
+}
+
+.dock-item-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dock-dropdown {
+    position: absolute;
+    top: calc(100% + 15px);
+    right: -10px;
+    transform: translateY(10px);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 12px 16px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1050;
+    pointer-events: none;
+}
+
+/* Arrow pointing up */
+.dock-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: 23px;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-left: 1px solid #e2e8f0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.dock-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dock-dropdown-content {
+    position: relative;
+    z-index: 2; /* above the arrow */
+}
+
+/* Dock Widget Styles */
+.dock-widget-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.dock-widget-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e3a8a;
+}
+
+.dock-widget-body {
+    min-width: 200px;
+}
+
+/* Location Input Adjustments */
+.dock-input-group select, 
+.dock-input-group input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    color: #475569;
+}
+.dock-input-group select:focus, 
+.dock-input-group input:focus {
+    border-color: #5C45FF;
+}
+.mt-2 { margin-top: 8px; }
+.mt-3 { margin-top: 12px; }
+
+/* Mini Calendar */
+.calendar-nav {
+    display: flex;
+    gap: 5px;
+}
+.calendar-nav button {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.calendar-nav button:hover {
+    background: #f1f5f9;
+    color: #1e3a8a;
+}
+.mini-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    text-align: center;
+    font-size: 12px;
+}
+.mini-calendar .day-name {
+    font-weight: 600;
+    color: #94a3b8;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+.mini-calendar .day {
+    padding: 6px;
+    border-radius: 50%;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.mini-calendar .day:hover {
+    background: #f1f5f9;
+    color: #1e3a8a;
+}
+.mini-calendar .day.today {
+    background: #5C45FF;
+    color: #ffffff;
+    font-weight: bold;
+}
+.mini-calendar .day.empty {
+    visibility: hidden;
+}
+
+@media (max-width: 900px) {
+    .dock-dropdown {
+        /* Mobile adjusts slightly since icons are 32px instead of 36px */
+        right: -5px;
+        transform: translateY(10px);
+    }
+    .dock-dropdown::before {
+        right: 16px;
+        transform: rotate(45deg);
+    }
+    .dock-dropdown.active {
+        transform: translateY(0);
+    }
+}
+
+.hamburger-btn {
+    display: none; /* Hidden on desktop */
 }
 
 .dock-icon svg {
@@ -390,53 +548,29 @@ body {
 }
 
 @media (max-width: 900px) {
-    .desktop-only {
-        display: none !important;
+    .main-nav {
+        display: none !important; /* Hide links on mobile/tab */
     }
 
     .navbar-container {
         justify-content: space-between;
+        padding: 0 15px;
     }
 
-    .mobile-actions {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 15px;
-        flex-grow: 1;
-        /* Allow taking up space between logo and right side */
-        min-width: 0;
-        /* Prevents overflowing the header */
+    .right-actions.premium-icon-dock {
+        gap: 8px;
+        padding-left: 0;
+        border-left: none;
     }
 
-    .mobile-icon-btn {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 4px;
-        position: relative;
+    .dock-icon {
+        width: 32px;
+        height: 32px;
     }
-
-    .mobile-lang {
-        font-size: 14px;
-        font-weight: 600;
-        color: #475569;
-    }
-
-    .cart-badge {
-        position: absolute;
-        top: -4px;
-        right: -6px;
-        background-color: #ff5722;
-        color: white;
-        font-size: 10px;
-        font-weight: bold;
+    
+    .dock-icon svg {
         width: 16px;
         height: 16px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .hamburger-btn {
@@ -448,7 +582,7 @@ body {
         align-items: center;
         justify-content: center;
         color: #1e3a8a;
-        /* Force dark blue color */
+        margin-left: 5px;
     }
 }
 
@@ -815,7 +949,7 @@ body {
     /* Slightly smaller */
     color: #475569;
     outline: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .dropdown-search-input::placeholder {

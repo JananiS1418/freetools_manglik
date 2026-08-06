@@ -3,7 +3,8 @@
 /* ============================================================== */
 
 .guidance-features-section {
-    padding: 0px 0 0px; /* Reduced padding to fix large gaps */
+    padding: 0px 0 0px;
+    /* Reduced padding to fix large gaps */
     position: relative;
     background: #FFFDFB;
     z-index: 5;
@@ -11,17 +12,20 @@
 }
 
 /* Background Mandalas/Sparkles */
-.gf-bg-left, .gf-bg-right {
+.gf-bg-left,
+.gf-bg-right {
     position: absolute;
     opacity: 0.15;
     z-index: -1;
     pointer-events: none;
 }
+
 .gf-bg-left {
     top: 10%;
     left: -5%;
     width: 300px;
 }
+
 .gf-bg-right {
     top: 30%;
     right: -5%;
@@ -31,7 +35,8 @@
 /* Header */
 .gf-header {
     text-align: center;
-    margin-bottom: 30px; /* Reduced gap between header and the main box */
+    margin-bottom: 30px;
+    /* Reduced gap between header and the main box */
     padding: 0 20px;
 }
 
@@ -43,26 +48,32 @@
     gap: 12px;
     margin-bottom: 20px;
 }
+
 .gf-sd-circle {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: #FFF8E7; /* Light faint orange/gold */
+    background: #FFF8E7;
+    /* Light faint orange/gold */
     border: 1px solid rgba(212, 175, 55, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .gf-star {
     color: #D4AF37;
     font-size: 20px;
 }
+
 .gf-sd-line {
     height: 1px;
     width: 80px;
-    background: rgba(212, 175, 55, 0.4); /* Gold line */
+    background: rgba(212, 175, 55, 0.4);
+    /* Gold line */
     position: relative;
 }
+
 .gf-sd-line.left::before {
     content: '';
     position: absolute;
@@ -73,6 +84,7 @@
     border-radius: 50%;
     background: #D4AF37;
 }
+
 .gf-sd-line.right::after {
     content: '';
     position: absolute;
@@ -114,8 +126,8 @@
 .gf-box {
     background: #ffffff;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
-    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.03);
     padding: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -135,7 +147,8 @@
 }
 
 .gf-item:hover {
-    transform: translateY(-5px); /* Lift item up on hover */
+    transform: translateY(-5px);
+    /* Lift item up on hover */
 }
 
 /* Vertical Divider with Diamond */
@@ -146,7 +159,7 @@
     top: 10%;
     bottom: 10%;
     width: 1px;
-    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.08), transparent);
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.08), transparent);
 }
 
 .gf-item:not(:last-child) .gf-diamond {
@@ -175,6 +188,7 @@
     box-shadow: 0 5px 15px rgba(76, 53, 230, 0.08);
     transition: all 0.4s ease;
 }
+
 .gf-icon-wrapper::before {
     content: '';
     position: absolute;
@@ -183,6 +197,7 @@
     border: 1px dashed rgba(76, 53, 230, 0.3);
     transition: transform 0.6s ease;
 }
+
 .gf-icon-wrapper svg {
     width: 32px;
     height: 32px;
@@ -193,20 +208,24 @@
 .gf-item:hover .gf-icon-wrapper {
     box-shadow: 0 8px 25px rgba(76, 53, 230, 0.2);
 }
+
 .gf-item:hover .gf-icon-wrapper::before {
-    transform: rotate(45deg); /* Spin border on hover */
+    transform: rotate(45deg);
+    /* Spin border on hover */
 }
+
 /* .gf-item:hover .gf-icon-wrapper svg {
     transform: scale(1.15); /* Replaced with unique animations below */
-} */
-
-.gf-item:nth-child(even) .gf-icon-wrapper {
+/* }*/
+*/ .gf-item:nth-child(even) .gf-icon-wrapper {
     background: #FFFAF0;
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.15);
 }
+
 .gf-item:nth-child(even) .gf-icon-wrapper::before {
     border: 1px dashed rgba(212, 175, 55, 0.5);
 }
+
 .gf-item:nth-child(even) .gf-icon-wrapper svg {
     color: #D4AF37;
 }
@@ -217,8 +236,8 @@
 
 /* Title */
 .gf-item-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
     font-weight: 700;
     color: #1a1a2e;
     margin-bottom: 10px;
@@ -233,11 +252,13 @@
     gap: 8px;
     margin-bottom: 15px;
 }
+
 .gf-h-line {
     width: 15px;
     height: 1px;
     background: rgba(76, 53, 230, 0.3);
 }
+
 .gf-h-dot {
     width: 4.5px;
     height: 4.5px;
@@ -248,6 +269,7 @@
 .gf-item:nth-child(even) .gf-h-line {
     background: rgba(212, 175, 55, 0.4);
 }
+
 .gf-item:nth-child(even) .gf-h-dot {
     background: #D4AF37;
 }
@@ -268,41 +290,58 @@
         flex: 1 1 33.333%;
         margin-bottom: 40px;
     }
-    .gf-item:nth-child(3)::after, .gf-item:nth-child(6)::after {
+
+    .gf-item:nth-child(3)::after,
+    .gf-item:nth-child(6)::after {
         display: none;
     }
-    .gf-item:nth-child(3) .gf-diamond, .gf-item:nth-child(6) .gf-diamond {
+
+    .gf-item:nth-child(3) .gf-diamond,
+    .gf-item:nth-child(6) .gf-diamond {
         display: none;
     }
 }
+
 @media (max-width: 768px) {
     .gf-title {
         font-size: 28px;
     }
+
     .gf-item {
         flex: 1 1 50%;
     }
-    .gf-item:nth-child(2)::after, .gf-item:nth-child(4)::after, .gf-item:nth-child(6)::after {
+
+    .gf-item:nth-child(2)::after,
+    .gf-item:nth-child(4)::after,
+    .gf-item:nth-child(6)::after {
         display: none;
     }
-    .gf-item:nth-child(2) .gf-diamond, .gf-item:nth-child(4) .gf-diamond, .gf-item:nth-child(6) .gf-diamond {
+
+    .gf-item:nth-child(2) .gf-diamond,
+    .gf-item:nth-child(4) .gf-diamond,
+    .gf-item:nth-child(6) .gf-diamond {
         display: none;
     }
+
     .gf-item:nth-child(3)::after {
         display: block;
     }
+
     .gf-item:nth-child(3) .gf-diamond {
         display: block;
     }
 }
+
 @media (max-width: 580px) {
     .gf-item {
         flex: 1 1 100%;
         margin-bottom: 40px;
     }
+
     .gf-item::after {
         display: none !important;
     }
+
     .gf-diamond {
         display: none !important;
     }
@@ -316,58 +355,116 @@
 .anim-zoom:hover .gf-icon-wrapper svg {
     animation: bounceZoom 0.8s ease-in-out infinite alternate;
 }
+
 @keyframes bounceZoom {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.3) rotate(5deg); }
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.3) rotate(5deg);
+    }
 }
 
 /* 2. Glow (Lightbulb) */
 .anim-glow:hover .gf-icon-wrapper svg {
     animation: bulbGlow 1s ease-in-out infinite alternate;
 }
+
 @keyframes bulbGlow {
-    0% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.4)); opacity: 0.8; }
-    100% { transform: scale(1.15); filter: drop-shadow(0 0 10px rgba(212, 175, 55, 1)); opacity: 1; }
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.4));
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 10px rgba(212, 175, 55, 1));
+        opacity: 1;
+    }
 }
 
 /* 3. Bounce (Shield) */
 .anim-bounce:hover .gf-icon-wrapper svg {
     animation: shieldBounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
+
 @keyframes shieldBounce {
-    0% { transform: scale(1) translateY(0); }
-    50% { transform: scale(1.15) translateY(-8px); }
-    100% { transform: scale(1.2) translateY(0); }
+    0% {
+        transform: scale(1) translateY(0);
+    }
+
+    50% {
+        transform: scale(1.15) translateY(-8px);
+    }
+
+    100% {
+        transform: scale(1.2) translateY(0);
+    }
 }
 
 /* 4. Pulse (Heart) */
 .anim-pulse:hover .gf-icon-wrapper svg {
     animation: heartPulse 0.8s ease-in-out infinite;
 }
+
 @keyframes heartPulse {
-    0% { transform: scale(1); }
-    15% { transform: scale(1.3); }
-    30% { transform: scale(1); }
-    45% { transform: scale(1.3); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.3);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* 5. Tick (Clock) */
 .anim-tick:hover .gf-icon-wrapper svg {
     animation: clockTick 1.2s steps(4, end) infinite;
 }
+
 @keyframes clockTick {
-    0% { transform: rotate(0deg) scale(1.15); }
-    25% { transform: rotate(-15deg) scale(1.15); }
-    75% { transform: rotate(15deg) scale(1.15); }
-    100% { transform: rotate(0deg) scale(1.15); }
+    0% {
+        transform: rotate(0deg) scale(1.15);
+    }
+
+    25% {
+        transform: rotate(-15deg) scale(1.15);
+    }
+
+    75% {
+        transform: rotate(15deg) scale(1.15);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1.15);
+    }
 }
 
 /* 6. Float (Lotus) */
 .anim-float:hover .gf-icon-wrapper svg {
     animation: lotusFloat 1.5s ease-in-out infinite alternate;
 }
+
 @keyframes lotusFloat {
-    0% { transform: translateY(0) scale(1); }
-    100% { transform: translateY(-5px) scale(1.15); }
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        transform: translateY(-5px) scale(1.15);
+    }
 }

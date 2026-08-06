@@ -1,6 +1,6 @@
 /* --- Manglik Dosha Result Section Styles --- */
 .result-section {
-    padding: 0 0 100px 0; /* Removed top padding to fix gap */
+    padding: 0 0 40px 0; /* Reduced bottom padding */
     position: relative;
     font-family: 'Inter', sans-serif;
     background-color: #FFFDFB;
@@ -14,7 +14,7 @@
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px; /* Reduced gap between cards */
 }
 
 /* Base Result Card (Glassmorphism + Shadow) */
@@ -201,12 +201,22 @@
 
 /* Individual Row Hover Effects */
 .summary-item:hover {
-    background: rgba(255, 255, 255, 0.95);
-    border-color: rgba(216, 181, 106, 0.4);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(74, 44, 140, 0.08);
+    background: linear-gradient(135deg, #ffffff 0%, #faf8ff 100%);
+    border-color: rgba(104, 104, 249, 0.3);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(104, 104, 249, 0.12), inset 0 0 15px rgba(104, 104, 249, 0.03);
     z-index: 5;
     position: relative;
+}
+
+.summary-item:hover .s-icon-wrapper {
+    background: #6868f9;
+    transform: rotate(10deg) scale(1.1);
+    box-shadow: 0 4px 12px rgba(104, 104, 249, 0.3);
+}
+
+.summary-item:hover .s-icon-wrapper svg {
+    stroke: #ffffff;
 }
 
 .s-icon-wrapper {
@@ -219,6 +229,11 @@
     border-radius: 50%;
     margin-right: 20px;
     flex-shrink: 0;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.s-icon-wrapper svg {
+    transition: all 0.3s ease;
 }
 
 .s-text {
@@ -332,34 +347,545 @@
     }
 
     .summary-item {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px 0;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 20px;
         height: auto;
-        min-height: 72px;
-        /* Touch friendly */
+        min-height: 60px;
+        margin-bottom: 12px;
     }
 
     .s-text {
         width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        margin-top: 12px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-top: 0;
+    }
+
+    .s-label {
+        width: auto;
+        min-width: 80px;
+    }
+
+    .s-colon {
+        margin: 0;
     }
 
     .s-value {
         text-align: left;
-        font-size: 16px;
+        font-size: 14px;
         color: #4A2C8C;
-        /* Highlight value on mobile */
+        word-break: break-word;
     }
 
     .s-icon-wrapper {
-        margin-right: 0;
-        background: rgba(74, 44, 140, 0.05);
+        margin-right: 15px;
+        background: rgba(104, 104, 249, 0.05);
     }
 }
+
+/* --- New Manglik Dosha Result Card --- */
+.manglik-result-card {
+    background: linear-gradient(135deg, #f7fbf0 0%, #edf6e5 100%);
+    border: 1px solid rgba(132, 192, 105, 0.2);
+    border-radius: 16px;
+    padding: 25px 40px;
+    margin: 5px auto 10px auto;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03), inset 0 2px 0 rgba(255,255,255,0.7);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    max-width: 900px;
+}
+
+.manglik-result-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(101, 163, 13, 0.08), inset 0 2px 0 rgba(255,255,255,0.9);
+}
+
+.result-section.animated .manglik-result-card {
+    animation: slideUpFade 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.manglik-result-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.m-result-image-col {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.m-image-container {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    animation: subtleFloat 6s ease-in-out infinite;
+}
+
+.m-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.m-shield-check {
+    display: none; /* Assuming the image includes the shield */
+}
+
+.m-result-text-col {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.m-badge-icon {
+    margin-bottom: 8px;
+    animation: pulseGlow 2.5s infinite;
+}
+
+.m-badge-icon svg {
+    stroke: #65a30d;
+    fill: #ecfccb;
+    filter: drop-shadow(0 4px 6px rgba(101,163,13,0.15));
+}
+
+.m-result-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1b4d2e;
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+
+.m-result-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.m-result-divider .m-line {
+    width: 45px;
+    height: 1px;
+    background: rgba(101, 163, 13, 0.4);
+}
+
+.m-result-divider .m-dot {
+    width: 6px;
+    height: 6px;
+    background: rgba(101, 163, 13, 0.6);
+    border-radius: 50%;
+}
+
+.m-result-desc {
+    font-size: 15px;
+    color: #475569;
+    max-width: 420px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- New Positive Manglik Report Card --- */
+.manglik-positive-card {
+    background: #ffffff;
+    border: 1px solid rgba(79, 70, 229, 0.1);
+    border-radius: 16px;
+    padding: 30px 40px;
+    margin: 5px auto 10px auto;
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.04);
+    max-width: 900px;
+    transition: all 0.4s ease;
+}
+
+.result-section.animated .manglik-positive-card {
+    animation: scaleFadeIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.mp-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #d97706;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(217, 119, 6, 0.1);
+}
+
+.mp-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e3a8a;
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 10px 0;
+}
+
+.mp-subtitle {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+}
+
+.mp-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mp-block {
+    background: #f8fafc;
+    border: 1px solid rgba(0,0,0,0.03);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mp-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.prediction-block {
+    background: linear-gradient(to right, #faf5ff, #f8fafc);
+}
+
+.remedies-block {
+    background: linear-gradient(to right, #fffbeb, #f8fafc);
+}
+
+.mp-block-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+.mp-block-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.mp-block-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.mp-block-content {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.mp-left-icon {
+    flex-shrink: 0;
+}
+
+.mars-circle-icon, .trishul-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    position: relative;
+}
+.mars-circle-icon::after, .trishul-icon::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border: 1px dashed rgba(0,0,0,0.15);
+    border-radius: 50%;
+    animation: slowSpin 10s linear infinite;
+}
+
+.mp-text p {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+.mp-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Email Banner in Manglik Report --- */
+.mp-email-banner {
+    background: #11183c; /* Darker, richer blue */
+    border-radius: 12px;
+    padding: 35px 30px;
+    margin-top: 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(17, 24, 60, 0.15);
+}
+
+.meb-bg-left {
+    position: absolute;
+    left: -100px;
+    top: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.meb-bg-right {
+    position: absolute;
+    right: -100px;
+    bottom: -50px;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(92, 69, 255, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.meb-star {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.4);
+    animation: twinkle 3s infinite alternate;
+    pointer-events: none;
+}
+
+.meb-header-group {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meb-icon-wrapper {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.meb-icon {
+    position: relative;
+    z-index: 2;
+    background: rgba(17, 24, 60, 0.8);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+}
+
+.meb-icon-ring {
+    position: absolute;
+    inset: 0;
+    border: 1px dashed rgba(212, 175, 55, 0.4);
+    border-radius: 50%;
+    animation: slowSpin 15s linear infinite;
+}
+
+.meb-title-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+
+.meb-line {
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #D4AF37);
+}
+.meb-line:last-child {
+    background: linear-gradient(-90deg, transparent, #D4AF37);
+}
+
+.meb-dot {
+    width: 4px;
+    height: 4px;
+    background: #D4AF37;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #D4AF37;
+}
+
+.meb-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.meb-subtitle {
+    font-size: 14px;
+    color: #cbd5e1;
+    margin: 0 0 25px 0;
+}
+
+.meb-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.meb-input-wrapper {
+    position: relative;
+    flex-grow: 1;
+}
+
+.meb-input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+}
+
+.meb-input-wrapper input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.meb-submit-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(to right, #ff6b6b, #ff8e53);
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+}
+
+.meb-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+@media (max-width: 600px) {
+    .meb-form {
+        flex-direction: column;
+    }
+    .meb-input-wrapper, .meb-submit-btn {
+        width: 100%;
+    }
+    .meb-submit-btn {
+        justify-content: center;
+    }
+}
+
+.mp-footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: #f1f5f9;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.mp-note-icon {
+    color: #6366f1;
+    margin-top: 2px;
+}
+
+/* Animations */
+@keyframes slowSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes scaleFadeIn {
+    0% { opacity: 0; transform: scale(0.95) translateY(20px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes slideUpFade {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes subtleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.05); filter: brightness(1.1); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .manglik-result-inner {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .m-image-container {
+        width: 140px;
+        height: 140px;
+    }
+    .manglik-result-card, .manglik-positive-card {
+        padding: 25px 20px;
+    }
+    .mp-block-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .mars-circle-icon, .trishul-icon {
+        margin-bottom: 10px;
+    }
+}
+
 
 /* 2. Premium Manglik Dosha Result Card */
 .premium-verdict-card {
@@ -498,7 +1024,7 @@
 .p-verdict-title {
     font-size: 32px;
     color: #1e3a8a;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     line-height: 1.3;
     margin: 0 0 15px 0;
