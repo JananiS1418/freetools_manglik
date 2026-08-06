@@ -78,12 +78,10 @@ body {
     background-repeat: no-repeat;
     background-color: #FFFDFB;
     position: relative;
-    padding: 12px 15px 60px;
-    /* Added 60px bottom padding so the calculator card shadow isn't cut off */
+    padding: 12px 15px 0px;
+    /* Bottom padding is 0, we'll let guidance-section handle the spacing */
     font-family: 'Inter', sans-serif;
     border-bottom: none;
-    /* Removed the hard border to blend backgrounds perfectly */
-    overflow: hidden;
 }
 
 /* Use banner1.png for mobile and tablet views */
