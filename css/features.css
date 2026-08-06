@@ -216,8 +216,8 @@
 
 /* .gf-item:hover .gf-icon-wrapper svg {
     transform: scale(1.15); /* Replaced with unique animations below */
-/* }*/
-*/ .gf-item:nth-child(even) .gf-icon-wrapper {
+/* } */
+.gf-item:nth-child(even) .gf-icon-wrapper {
     background: #FFFAF0;
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.15);
 }
@@ -466,5 +466,47 @@
 
     100% {
         transform: translateY(-5px) scale(1.15);
+    }
+}
+
+/* ============================================================== */
+/* --- Responsive Adjustments for Features Grid ---               */
+/* ============================================================== */
+@media (max-width: 1024px) {
+    .gf-item {
+        flex: 1 1 33.333%;
+        margin-bottom: 30px;
+    }
+    /* Hide the right divider for every 3rd item to prevent it from showing at the edge */
+    .gf-item:nth-child(3n)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .gf-item {
+        flex: 1 1 50%;
+    }
+    /* Hide the right divider for every 2nd item */
+    .gf-item:nth-child(3n)::after {
+        display: block; /* reset previous rule */
+        background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.08), transparent);
+    }
+    .gf-item:nth-child(2n)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .gf-item {
+        flex: 1 1 100%;
+        margin-bottom: 40px;
+    }
+    /* Hide all vertical dividers on mobile */
+    .gf-item::after {
+        display: none !important;
+    }
+    .gf-box {
+        padding: 30px 15px;
     }
 }

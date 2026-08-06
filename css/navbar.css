@@ -65,7 +65,7 @@ body {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 18px;
+    gap: 12px; /* Reduced from 18px to bring items closer */
 }
 
 .nav-item>a {
@@ -79,6 +79,8 @@ body {
     transition: color 0.2s ease;
     gap: 4px;
     position: relative;
+    white-space: nowrap; /* Prevent text wrapping/squishing */
+    flex-shrink: 0; /* Prevent the item from shrinking and overlapping */
 }
 
 .nav-item>a:hover {
@@ -114,7 +116,7 @@ body {
     letter-spacing: 0.5px;
     padding: 4px 10px; /* Better inner spacing */
     border-radius: 12px;
-    margin-left: 12px; /* Definite gap from text */
+    margin-left: 6px; /* Reduced from 12px to close the gap */
     position: relative;
     top: -1px;
     animation: newBadgePulse 2s infinite; /* Added animation! */

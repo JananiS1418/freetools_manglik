@@ -1,5 +1,6 @@
 /* --- Global Fixes --- */
-html, body {
+html,
+body {
     overflow-x: hidden;
     width: 100%;
     max-width: 100vw;
@@ -77,9 +78,11 @@ html, body {
     background-repeat: no-repeat;
     background-color: #FFFDFB;
     position: relative;
-    padding: 12px 15px 60px; /* Added 60px bottom padding so the calculator card shadow isn't cut off */
+    padding: 12px 15px 60px;
+    /* Added 60px bottom padding so the calculator card shadow isn't cut off */
     font-family: 'Inter', sans-serif;
-    border-bottom: none; /* Removed the hard border to blend backgrounds perfectly */
+    border-bottom: none;
+    /* Removed the hard border to blend backgrounds perfectly */
     overflow: hidden;
 }
 
@@ -432,7 +435,7 @@ html, body {
     position: relative;
     z-index: 10;
     max-width: 100%;
-    overflow: hidden;
+    /* Removed overflow: hidden so dropdowns can overflow bottom edge */
     transition: all 0.4s ease;
 }
 
@@ -970,20 +973,6 @@ html, body {
         grid-column: span 2 !important;
         justify-self: center;
     }
-
-    /* 2x2 grid for Birth Time on iPad/Mobile to prevent text overlap */
-    .input-group.col-4 {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 8px;
-    }
-
-    .input-group.col-4 select {
-        width: 100%;
-        padding-left: 8px;
-        padding-right: 20px;
-        font-size: 13px;
-    }
 }
 
 
@@ -1024,43 +1013,41 @@ html, body {
 
     /* Right-aligned text block */
     .hero-header-content {
-        margin: 0;
+        margin: 0 0 0 auto;
         width: 100%;
-        max-width: none;
-        height: 300px;
-        /* Force height so the form card starts exactly here */
-        padding: 20px 10px 0 110px;
-        /* 20px top padding pushes it slightly up from center, 110px space for deity */
+        max-width: calc(100% - 180px); /* Increased to 180px to safely clear the deity's knee completely */
+        height: 300px; /* Restored to fixed height to anchor form card correctly */
+        padding: 40px 10px 0 5px; /* Restored original top padding */
         box-sizing: border-box;
         text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        /* Align from the top padding to shift it upward */
+        justify-content: flex-start; /* Moved text back up */
         align-items: center;
     }
 
     .title-pill-badge {
         margin-top: 0;
-        margin-bottom: 12px;
-        font-size: 11px;
+        margin-bottom: 8px;
+        font-size: 10px;
+        padding: 6px 12px;
     }
 
     .hero-title {
         display: flex;
         flex-direction: column;
         line-height: 1.1;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
     }
 
     .hero-title .dark-text {
-        font-size: 32px;
+        font-size: 24px; /* Reduced from 32px to fit small screens */
         font-weight: 700;
         color: #2D205A;
     }
 
     .hero-title .gold-text {
-        font-size: 34px;
+        font-size: 26px; /* Reduced from 34px */
         font-weight: 700;
         color: #BC8624;
     }
@@ -1071,8 +1058,8 @@ html, body {
 
     .hero-subtitle {
         max-width: 260px;
-        font-size: 13px;
-        line-height: 1.5;
+        font-size: 12px; /* Reduced from 13px */
+        line-height: 1.35;
         color: #333333;
         font-weight: 500;
         margin: 0 auto;
@@ -1327,18 +1314,22 @@ html, body {
     .hero-header-content {
         margin: 0 0 0 auto !important;
         width: 100% !important;
-        max-width: 480px !important;
-        /* Max content width requested */
+        max-width: calc(100% - 310px) !important;
+        /* Reduced from 410px to close the huge empty gap between image and text */
         height: 390px !important;
-        /* Form overlaps 430px banner by exactly 40px */
-        padding: 40px 20px 0 20px !important;
+        /* Fixed height to anchor the form card to the bottom of the banner */
+        padding: 60px 20px 0 20px !important; 
         box-sizing: border-box !important;
         text-align: center !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: flex-start !important;
-        /* Start from top to shift text upward */
+        /* Moved text back up */
         align-items: center !important;
+    }
+
+    .title-divider {
+        display: none !important;
     }
 
     .hero-container {
@@ -1355,6 +1346,7 @@ html, body {
         grid-template-columns: 1fr 1fr !important;
         display: grid !important;
         gap: 16px !important;
+        align-items: flex-start !important; /* Prevent items from stretching, which causes huge gaps in Birth Time */
     }
 
     .calc-form-grid>.form-group,
@@ -1363,18 +1355,18 @@ html, body {
         grid-column: span 1 !important;
     }
 
-    /* Prevent text cutoff for 4-column Time inputs on tablet */
+    /* Keep Birth Time in one row on Tablet, but squish them to fit */
     .input-group.col-4 {
-        gap: 6px !important;
+        display: flex !important;
+        gap: 4px !important;
     }
 
     .input-group.col-4 select {
-        width: calc(25% - 4.5px) !important;
-        padding-left: 2px !important;
-        padding-right: 16px !important;
+        width: calc(25% - 3px) !important;
+        padding-left: 4px !important;
+        padding-right: 14px !important;
+        /* Removed font-size override so it perfectly matches Birth Date (15px) */
         background-position: right 2px center !important;
-        font-size: 12px !important;
-        /* Slightly smaller to guarantee fit */
     }
 
     .calc-form-grid>.privacy-group,
@@ -1385,5 +1377,173 @@ html, body {
         width: 100% !important;
         display: flex !important;
         justify-content: center !important;
+    }
+}
+
+/* ============================================================== */
+/* --- Tiny Mobile Screens (e.g. 320px) ---                       */
+/* ============================================================== */
+@media (max-width: 380px) {
+    .hero-header-content {
+        padding: 40px 5px 0 5px !important; /* Keep the same top padding as other mobile screens for consistency */
+        max-width: calc(100% - 150px) !important; /* Slightly less safe space, but banner scales down so it's fine */
+    }
+    
+    .title-pill-badge {
+        font-size: 9px !important;
+        padding: 4px 8px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .hero-title .dark-text {
+        font-size: 20px !important; /* Shrunk down to fit narrow screen */
+    }
+
+    .hero-title .gold-text {
+        font-size: 22px !important;
+    }
+
+    .hero-subtitle {
+        font-size: 11px !important;
+        line-height: 1.2 !important;
+    }
+}
+
+/* ============================================================== */
+/* --- Custom Animated Selects ---                                */
+/* ============================================================== */
+
+.custom-select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+}
+
+/* Match the exact width for columns */
+.input-group.col-3 .custom-select-wrapper { width: calc(33.33% - 8px); }
+.input-group.col-4 .custom-select-wrapper { width: calc(25% - 9px); }
+
+.custom-select-trigger {
+    width: 100%;
+    height: 56px;
+    padding: 0 28px 0 10px;
+    border: 1px solid rgba(214, 170, 72, 0.3);
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1e293b;
+    background-color: #FFFDFC;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23d6aa48' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.custom-select-trigger:hover,
+.custom-select-trigger.active {
+    border-color: #d6aa48;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(214, 170, 72, 0.08);
+    transform: translateY(-2px);
+}
+
+.custom-select-trigger.active {
+    border-color: #8A3DFF;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(138, 61, 255, 0.15), 0 0 15px rgba(214, 170, 72, 0.2);
+}
+
+.custom-select-trigger span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-options-container {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid rgba(214, 170, 72, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    max-height: 250px;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-options-container.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.custom-option {
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1e293b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.custom-option:last-child {
+    border-bottom: none;
+}
+
+.custom-option:hover {
+    background-color: #F8F5FF;
+    color: #5C45FF;
+    padding-left: 20px; /* Slide effect */
+}
+
+.custom-option.selected {
+    background-color: #5C45FF;
+    color: #FFFFFF;
+}
+
+/* Custom Scrollbar for dropdowns */
+.custom-options-container::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-options-container::-webkit-scrollbar-track {
+    background: #F3EEFF;
+    border-radius: 4px;
+}
+.custom-options-container::-webkit-scrollbar-thumb {
+    background: #c3b5eb;
+    border-radius: 4px;
+}
+
+/* Fix width and prevent text truncation on tablet & mobile */
+@media (max-width: 1023px) {
+    .input-group.col-4 .custom-select-wrapper {
+        width: calc(25% - 3px) !important;
+    }
+    .input-group.col-3 .custom-select-trigger,
+    .input-group.col-4 .custom-select-trigger {
+        padding-left: 4px !important;
+        padding-right: 18px !important; /* Less padding so text fits */
+        background-position: right 4px center !important; /* Move arrow closer to edge */
+        font-size: 13px !important; /* Slightly smaller text to guarantee fit */
+    }
+}
+
+/* Mobile specific overrides to restore 2x2 grid for Birth Time */
+@media (max-width: 600px) {
+    .input-group.col-4 .custom-select-wrapper {
+        width: 100% !important;
+    }
+    .input-group.col-3 .custom-select-wrapper {
+        width: calc(33.33% - 5.33px) !important;
     }
 }

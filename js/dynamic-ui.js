@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     populateBirthForm();
+    initCustomSelects(); // Convert all native selects to custom animated UI
     initMiniCalendar();
 });
 
@@ -168,3 +169,119 @@ function initMiniCalendar() {
 document.querySelectorAll('footer a[href="#"]').forEach(link => {
     link.addEventListener('click', (e) => e.preventDefault());
 });
+
+// Custom Animated Selects Implementation
+function initCustomSelects() {
+    const nativeSelects = document.querySelectorAll('.luxury-input select, .dock-select');
+    
+    // Close all open dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.custom-select-wrapper')) {
+            document.querySelectorAll('.custom-options-container').forEach(container => {
+                container.classList.remove('active');
+            });
+            document.querySelectorAll('.custom-select-trigger').forEach(trigger => {
+                trigger.classList.remove('active');
+            });
+            
+            // Reset z-index for all field boxes
+            document.querySelectorAll('.field-box, .action-group, .form-group').forEach(box => {
+                box.style.zIndex = '';
+            });
+        }
+    });
+
+    nativeSelects.forEach(select => {
+        // Skip if already initialized
+        if (select.closest('.custom-select-wrapper')) return;
+
+        // 1. Create wrapper
+        const wrapper = document.createElement('div');
+        wrapper.className = 'custom-select-wrapper';
+
+        // 2. Hide native select but keep it functioning for forms
+        select.style.display = 'none';
+        
+        // 3. Create trigger element
+        const trigger = document.createElement('div');
+        trigger.className = 'custom-select-trigger';
+        // Use the selected option's text or placeholder
+        const selectedOption = select.options[select.selectedIndex];
+        trigger.innerHTML = `<span>${selectedOption ? selectedOption.text : ''}</span>`;
+        
+        // 4. Create options container
+        const optionsContainer = document.createElement('div');
+        optionsContainer.className = 'custom-options-container';
+        
+        // 5. Populate options
+        Array.from(select.options).forEach((option, index) => {
+            if (option.disabled && option.hidden) return; // Skip placeholder
+
+            const customOption = document.createElement('div');
+            customOption.className = 'custom-option';
+            if (option.selected) customOption.classList.add('selected');
+            customOption.textContent = option.text;
+            customOption.dataset.value = option.value;
+            customOption.dataset.index = index;
+
+            customOption.addEventListener('click', function(e) {
+                // Update native select
+                select.selectedIndex = this.dataset.index;
+                select.dispatchEvent(new Event('change'));
+
+                // Update trigger text
+                trigger.querySelector('span').textContent = this.textContent;
+
+                // Update selected state
+                optionsContainer.querySelectorAll('.custom-option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+
+                // Close dropdown
+                optionsContainer.classList.remove('active');
+                trigger.classList.remove('active');
+                
+                // Reset z-index
+                const parentBox = this.closest('.field-box, .action-group, .form-group');
+                if (parentBox) {
+                    parentBox.style.zIndex = '';
+                }
+
+                e.stopPropagation();
+            });
+
+            optionsContainer.appendChild(customOption);
+        });
+
+        // Toggle dropdown on click
+        trigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isActive = this.classList.contains('active');
+            
+            // Close all other dropdowns
+            document.querySelectorAll('.custom-options-container').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.custom-select-trigger').forEach(t => t.classList.remove('active'));
+            
+            // Reset z-index for all field boxes
+            document.querySelectorAll('.field-box, .action-group, .form-group').forEach(box => {
+                box.style.zIndex = '';
+            });
+            
+            if (!isActive) {
+                this.classList.add('active');
+                optionsContainer.classList.add('active');
+                
+                // Elevate z-index of parent field-box so dropdown overlaps siblings
+                const parentBox = this.closest('.field-box, .action-group, .form-group');
+                if (parentBox) {
+                    parentBox.style.zIndex = '50';
+                }
+            }
+        });
+
+        // Assemble DOM
+        select.parentNode.insertBefore(wrapper, select);
+        wrapper.appendChild(select);
+        wrapper.appendChild(trigger);
+        wrapper.appendChild(optionsContainer);
+    });
+}
