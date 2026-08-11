@@ -1,6 +1,6 @@
 /* --- Manglik Dosha Result Section Styles --- */
 .result-section {
-    padding: 30px 0 40px 0;
+    padding: 30px 0 20px 0;
     /* A little top padding, not too much */
     margin-top: 0px;
     position: relative;
@@ -11,13 +11,12 @@
 }
 
 .result-container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* Reduced gap between cards */
 }
 
 /* Base Result Card (Glassmorphism + Shadow) */
@@ -47,6 +46,8 @@
     position: relative;
     overflow: hidden;
     padding: 30px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(0);
 }
@@ -278,6 +279,122 @@
 
 .summary-item:hover .s-value {
     color: #6868f9;
+}
+
+/* --- Distinct 'Chat with Astrologer' Button Design --- */
+.btn-chat-astrologer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.25);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-chat-astrologer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.6s ease;
+}
+
+.btn-chat-astrologer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.35);
+    background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+}
+
+.btn-chat-astrologer:hover::before {
+    left: 100%;
+}
+
+.btn-chat-astrologer span {
+    margin: 0 12px;
+}
+
+.btn-chat-astrologer .talk-icon {
+    color: #a5b4fc; /* light indigo */
+}
+
+.btn-chat-astrologer .arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.btn-chat-astrologer:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+    .positive-action-row {
+        flex-direction: column !important;
+    }
+}
+
+/* --- Distinct 'Talk with Astrologer' Button for Positive Manglik --- */
+.btn-talk-positive {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f43f5e 0%, #be123c 100%);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(190, 18, 60, 0.25);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-talk-positive::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transition: all 0.6s ease;
+}
+
+.btn-talk-positive:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(190, 18, 60, 0.35);
+    background: linear-gradient(135deg, #e11d48 0%, #9f1239 100%);
+}
+
+.btn-talk-positive:hover::before {
+    left: 100%;
+}
+
+.btn-talk-positive span {
+    margin: 0 12px;
+}
+
+.btn-talk-positive .talk-icon {
+    color: #fecdd3; /* light rose */
+}
+
+.btn-talk-positive .arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.btn-talk-positive:hover .arrow-icon {
+    transform: translateX(4px);
 }
 
 .s-value .badge {
@@ -659,7 +776,7 @@
     background: #11183c;
     /* Darker, richer blue */
     border-radius: 12px;
-    padding: 35px 30px;
+    padding: 25px 30px;
     margin-top: 25px;
     text-align: center;
     position: relative;
@@ -1342,20 +1459,793 @@
     }
 
     .p-verdict-title {
-        font-size: 26px;
+        font-size: 20px;
     }
 
-    .highlight-not-gradient {
-        font-size: 30px;
+    .p-verdict-badge {
+        font-size: 14px;
+        padding: 6px 16px;
     }
+}
 
-    .p-feature-badges {
+/* --- New Positive Manglik Report Layout --- */
+.manglik-positive-card-new {
+    background: #fffafa; /* Very light pink/white */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    border: 1px solid #fee2e2;
+    margin-bottom: 40px;
+}
+
+.mp-header-new {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mp-icon-new {
+    background: #e11d48;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2);
+}
+
+.mp-title-new {
+    font-size: 32px;
+    font-weight: 700;
+    color: #be123c;
+    margin-bottom: 10px;
+}
+
+.mp-subtitle-new {
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.mp-divider-new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mp-divider-new .m-line {
+    height: 1px;
+    width: 40px;
+    background: #fecdd3;
+}
+
+.mp-divider-new .sh-star {
+    color: #f43f5e;
+    font-size: 12px;
+}
+
+.mp-summary-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 30px;
+    border: 1px solid #fee2e2;
+    margin-bottom: 40px;
+}
+
+.mp-summary-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mp-summary-icon.red-light-bg {
+    background: #fff1f2;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mp-summary-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.mp-summary-text .label {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.mp-summary-text .value {
+    font-size: 15px;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.mp-summary-divider {
+    width: 1px;
+    height: 40px;
+    background: #f1f5f9;
+}
+
+.mp-main-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.mp-block-new {
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.mp-block-new:last-child {
+    margin-bottom: 0;
+}
+
+.prediction-block-new {
+    background: #fff1f2;
+    border: 1px solid #ffe4e6;
+}
+
+.remedies-block-new {
+    background: #fffbeb;
+    border: 1px solid #fef3c7;
+}
+
+.mars-circle-icon-new, .trishul-icon-new {
+    background: #ffffff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.04);
+}
+
+.mp-block-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.prediction-block-new .mp-block-title {
+    color: #be123c;
+}
+
+.mp-content-container p {
+    color: #334155;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.mp-content-container p:last-child {
+    margin-bottom: 0;
+}
+
+.mp-email-card-new {
+    background: linear-gradient(135deg, #e11d48 0%, #9f1239 100%);
+    border-radius: 20px;
+    padding: 30px;
+    height: 100%;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 20px 40px rgba(159, 18, 57, 0.3);
+}
+
+.mec-icon-wrapper {
+    margin-bottom: 15px;
+}
+
+.mec-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mec-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.mec-subtitle {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.mec-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.mec-input-wrapper {
+    position: relative;
+}
+
+.mec-input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mec-input-wrapper input {
+    width: 100%;
+    padding: 16px 20px 16px 50px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.mec-submit-btn {
+    background: linear-gradient(90deg, #f97316 0%, #ea580c 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(234, 88, 12, 0.3);
+}
+
+.mec-trust-badges {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+}
+
+.mec-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    text-align: left;
+    opacity: 0.9;
+}
+
+.mp-footer-note-new {
+    background: #fff1f2;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    color: #475569;
+    font-size: 14px;
+}
+
+.mpn-icon {
+    background: #ffe4e6;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mp-talk-banner-new {
+    background: #ffffff;
+    border: 1px solid #fee2e2;
+    border-radius: 16px;
+    padding: 20px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.mtb-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mtb-icon {
+    background: #fff1f2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mtb-text h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.mtb-text p {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .mp-main-grid {
+        grid-template-columns: 1fr;
+    }
+    .mp-summary-bar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .mp-summary-divider {
+        display: none;
+    }
+    .mp-talk-banner-new {
         flex-direction: column;
-        align-items: stretch;
-        padding: 0 20px 30px 20px;
+        text-align: center;
+        gap: 20px;
     }
+    .mtb-left {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .mp-block-new {
+        flex-direction: column;
+        text-align: center;
+    }
+    .mars-circle-icon-new, .trishul-icon-new {
+        margin: 0 auto;
+    }
+    .mp-block-title {
+        justify-content: center;
+    }
+    .mec-trust-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+    .mec-badge {
+        text-align: center;
+    }
+}
 
-    .p-mini-card {
-        width: 100%;
+/* --- Redesigned Non-Manglik Dosha Card --- */
+.non-manglik-card-new {
+    background: linear-gradient(135deg, #f4fbf0 0%, #e8f5d6 100%);
+    border: 1px solid rgba(132, 192, 105, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 10px auto;
+    max-width: 1100px;
+    box-shadow: 0 10px 40px rgba(22, 163, 74, 0.05);
+}
+
+.nm-main-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.nm-left-col {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nm-shield-icon-container {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 1px dashed rgba(21, 128, 61, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.nm-shield-icon-container::before {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 1px solid rgba(21, 128, 61, 0.1);
+    animation: slowSpin 15s linear infinite;
+}
+
+.nm-shield-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 30px rgba(22, 163, 74, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.nm-text-content {
+    text-align: left;
+}
+
+.nm-result-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #14532d;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.nm-result-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.nm-result-divider .m-line {
+    height: 1px;
+    width: 80px;
+    background: rgba(21, 128, 61, 0.3);
+}
+
+.nm-result-divider .m-dot {
+    color: #15803d;
+    font-size: 14px;
+}
+
+.nm-result-desc {
+    color: #334155;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.nm-talk-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.nm-talk-header {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.nm-talk-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.nm-talk-text h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #15803d;
+    margin: 0 0 8px 0;
+}
+
+.nm-talk-text p {
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.btn-talk-negative {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #064e3b;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(6, 78, 59, 0.25);
+}
+
+.btn-talk-negative:hover {
+    background: #022c22;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(6, 78, 59, 0.35);
+}
+
+.btn-talk-negative .talk-icon {
+    color: #a7f3d0;
+}
+
+.nm-trust-badges {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 20px;
+}
+
+.nm-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: #64748b;
+    line-height: 1.3;
+}
+
+@media (max-width: 1024px) {
+    .nm-main-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .nm-left-col {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nm-text-content {
+        text-align: center;
+    }
+    .nm-result-divider {
+        justify-content: center;
+    }
+    .nm-trust-badges {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* --- Recommended Homas Section --- */
+.homa-section {
+    margin-top: -30px;
+    padding: 0 80px;
+    text-align: center;
+}
+
+.homa-header {
+    margin-bottom: 25px;
+}
+
+.homa-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.homa-divider .h-line {
+    height: 1px;
+    width: 60px;
+    background: rgba(220, 38, 38, 0.3);
+    position: relative;
+}
+
+.homa-divider .h-line::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #dc2626;
+    transform: rotate(45deg);
+    top: -1.5px;
+}
+
+.homa-divider .h-line:first-child::before {
+    left: 0;
+}
+
+.homa-divider .h-line:last-child::before {
+    right: 0;
+}
+
+.homa-divider .h-icon {
+    color: #dc2626;
+    background: #fff1f2;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homa-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #b91c1c;
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 10px 0;
+}
+
+.homa-subtitle {
+    font-size: 15px;
+    color: #475569;
+    margin: 0;
+}
+
+.homa-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.homa-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 16px;
+    padding: 12px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.homa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.08);
+}
+
+.homa-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b91c1c;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 12px;
+    z-index: 2;
+}
+
+.homa-img-wrapper {
+    position: relative;
+    width: 65%;
+    margin: 5px auto 10px auto;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 50%;
+}
+
+.homa-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.homa-card-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.homa-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #b91c1c;
+    margin: 0 0 5px 0;
+    line-height: 1.4;
+    font-family: 'Playfair Display', serif;
+}
+
+.homa-card-subtitle {
+    font-size: 13px;
+    color: #475569;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+.homa-card-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 8px;
+    width: 120px;
+}
+.homa-card-divider .hcd-line {
+    height: 1px;
+    flex-grow: 1;
+    background: rgba(220, 38, 38, 0.4);
+}
+.homa-card-divider .hcd-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #be123c;
+}
+.homa-btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 15px;
+    background: #ffffff;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.homa-btn:hover {
+    background: #fef2f2;
+}
+
+@media (max-width: 1024px) {
+    .homa-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .homa-grid {
+        grid-template-columns: 1fr;
     }
 }

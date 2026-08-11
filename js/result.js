@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const calcForm = document.getElementById('calcForm');
     const calcBtn = document.getElementById('calcBtn');
     const resultSection = document.getElementById('resultSection');
 
     if (calcForm && calcBtn && resultSection) {
-        calcForm.addEventListener('submit', function(e) {
+        calcForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
             // Prevent double submission animation
@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // 1. Start loading state
             calcBtn.disabled = true;
             const originalText = calcBtn.innerHTML;
-            
+
             // Loading sequence
             calcBtn.innerHTML = '<span class="icon">✨</span> Analyzing Birth Chart...';
-            
+
             setTimeout(() => {
                 calcBtn.innerHTML = '<span class="icon">✨</span> Checking Mars Position...';
             }, 300);
@@ -35,14 +35,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 const isManglik = Math.random() < 0.5;
                 const positiveCard = document.getElementById('manglikPositiveCard');
                 const negativeCard = document.getElementById('manglikNegativeCard');
-                
+                const homaSection = document.getElementById('homaSection');
+                const powerfulRemediesSection = document.getElementById('powerfulRemediesSection');
+
                 if (positiveCard && negativeCard) {
                     if (isManglik) {
                         positiveCard.style.display = 'block';
                         negativeCard.style.display = 'none';
+                        if (homaSection) homaSection.style.display = 'block';
+                        if (powerfulRemediesSection) powerfulRemediesSection.style.display = 'none';
                     } else {
                         positiveCard.style.display = 'none';
                         negativeCard.style.display = 'block';
+                        if (homaSection) homaSection.style.display = 'none';
+                        if (powerfulRemediesSection) powerfulRemediesSection.style.display = 'block';
                     }
                 }
 
@@ -58,11 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Add animation class slightly after scroll starts
                 setTimeout(() => {
                     resultSection.classList.add('animated');
-                    
+
                     // Add some CSS classes to the cards for fade up
                     const cards = resultSection.querySelectorAll('.result-card, .stats-grid');
                     cards.forEach(card => card.classList.add('fade-up-anim'));
-                    
+
                     // Only show confetti if it's a good result
                     if (!isManglik) {
                         createConfetti();
@@ -82,14 +88,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (let i = 0; i < 30; i++) {
             const particle = document.createElement('div');
-            
+
             // Random properties
             const size = Math.random() * 8 + 4;
             const x = Math.random() * 100;
             const y = Math.random() * 100;
             const duration = Math.random() * 2 + 1;
             const delay = Math.random() * 0.5;
-            
+
             particle.style.position = 'absolute';
             particle.style.left = `${x}%`;
             particle.style.top = `${y}%`;
@@ -99,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             particle.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
             particle.style.opacity = '0';
             particle.style.boxShadow = '0 0 10px rgba(212, 175, 55, 0.5)';
-            
+
             // Animate using Web Animations API
             particle.animate([
                 { opacity: 0, transform: `translate(0, 0) scale(0)` },

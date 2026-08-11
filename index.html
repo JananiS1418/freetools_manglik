@@ -135,6 +135,12 @@
 
             <!-- Right: Premium Icon Dock (All Screens) -->
             <div class="right-actions premium-icon-dock">
+                <!-- Speak to Astrologer Button -->
+                <a href="#" class="btn-calculate luxury-btn header-cta-btn"
+                    style="padding: 8px 20px; font-size: 13px; font-weight: 600; text-decoration: none; margin-right: 15px; display: inline-flex; align-items: center; justify-content: center; height: 36px;">
+                    Speak to Astrologer
+                </a>
+
                 <!-- Search -->
                 <a href="#" class="dock-icon" id="desktopSearchBtn" title="Search">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -154,8 +160,11 @@
                         </svg>
                     </a>
                     <div class="dock-dropdown" id="locationDropdown">
-                        <div class="dock-widget-header" style="flex-direction: column; align-items: flex-start; gap: 4px; border-bottom: none; padding-bottom: 0;">
-                            <span class="dock-widget-title" style="font-size: 11px; color: #64748b; text-transform: uppercase;">Current Location</span>
+                        <div class="dock-widget-header"
+                            style="flex-direction: column; align-items: flex-start; gap: 4px; border-bottom: none; padding-bottom: 0;">
+                            <span class="dock-widget-title"
+                                style="font-size: 11px; color: #64748b; text-transform: uppercase;">Current
+                                Location</span>
                             <span style="font-size: 14px; color: #1e3a8a; font-weight: 600;">Chennai, India</span>
                         </div>
                         <div class="dock-widget-header" style="margin-top: 10px; padding-top: 10px;">
@@ -170,7 +179,8 @@
                             <div class="input-group luxury-input dock-input-group mt-2">
                                 <input type="text" id="dockCity" placeholder="Enter Your City">
                             </div>
-                            <button class="btn-calculate luxury-btn mt-3" style="width: 100%; padding: 8px; font-size: 13px;">Update</button>
+                            <button class="btn-calculate luxury-btn mt-3"
+                                style="width: 100%; padding: 8px; font-size: 13px;">Update</button>
                         </div>
                     </div>
                 </div>
@@ -256,6 +266,11 @@
         <!-- Mobile Additional Info (Date & Location) Removed as it is now in the main header -->
 
         <div class="drawer-content">
+            <div class="drawer-cta-wrapper">
+                <a href="#" class="btn-calculate luxury-btn"
+                    style="width: 100%; display: flex; justify-content: center; padding: 12px; font-weight: 600; font-size: 14px; text-decoration: none; border-radius: 25px;">Speak
+                    to Astrologer</a>
+            </div>
             <ul class="drawer-nav">
                 <li class="has-drawer-dropdown">
                     <a href="#" class="drawer-link">Home <span class="drawer-caret"></span></a>
@@ -549,6 +564,20 @@
         <!-- Trust Indicators Removed as requested -->
     </section>
 
+    <!-- Visual Section Breaker -->
+    <div class="elegant-section-breaker">
+        <svg width="100%" max-width="600" height="24" viewBox="0 0 600 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg" style="max-width: 600px; display: block; margin: 0 auto;">
+            <line x1="0" y1="12" x2="260" y2="12" stroke="#be123c" stroke-width="1" stroke-dasharray="4 6"
+                opacity="0.4" />
+            <circle cx="300" cy="12" r="6" fill="#d4af37" />
+            <circle cx="280" cy="12" r="3" fill="#be123c" opacity="0.8" />
+            <circle cx="320" cy="12" r="3" fill="#be123c" opacity="0.8" />
+            <line x1="340" y1="12" x2="600" y2="12" stroke="#be123c" stroke-width="1" stroke-dasharray="4 6"
+                opacity="0.4" />
+        </svg>
+    </div>
+
     <!-- Manglik Dosha Result Section (Hidden initially) -->
     <section id="resultSection" class="result-section" style="display: none;">
         <!-- Golden Particles Container (Empty initially, populated via CSS/JS) -->
@@ -568,7 +597,11 @@
 
                 <div class="summary-header animate-row" style="animation-delay: 0.05s;">
                     <div class="sh-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="#d97706" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
                     </div>
                     <h2 class="animated-title">Birth Details</h2>
                     <div class="sh-divider">
@@ -580,7 +613,14 @@
 
                 <div class="summary-grid premium-grid">
                     <div class="summary-item animate-row" style="animation-delay: 0.13s;">
-                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg></div>
                         <div class="s-text">
                             <div class="s-label">Birth Date</div>
                             <div class="s-colon">:</div>
@@ -588,7 +628,12 @@
                         </div>
                     </div>
                     <div class="summary-item animate-row" style="animation-delay: 0.21s;">
-                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg></div>
                         <div class="s-text">
                             <div class="s-label">Birth Time</div>
                             <div class="s-colon">:</div>
@@ -596,7 +641,12 @@
                         </div>
                     </div>
                     <div class="summary-item animate-row" style="animation-delay: 0.29s;">
-                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg></div>
                         <div class="s-text">
                             <div class="s-label">City</div>
                             <div class="s-colon">:</div>
@@ -604,7 +654,21 @@
                         </div>
                     </div>
                     <div class="summary-item animate-row" style="animation-delay: 0.37s;">
-                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></div>
+                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                <path d="M9 22v-4h6v4"></path>
+                                <path d="M8 6h.01"></path>
+                                <path d="M16 6h.01"></path>
+                                <path d="M12 6h.01"></path>
+                                <path d="M12 10h.01"></path>
+                                <path d="M12 14h.01"></path>
+                                <path d="M16 10h.01"></path>
+                                <path d="M16 14h.01"></path>
+                                <path d="M8 10h.01"></path>
+                                <path d="M8 14h.01"></path>
+                            </svg></div>
                         <div class="s-text">
                             <div class="s-label">State</div>
                             <div class="s-colon">:</div>
@@ -612,7 +676,15 @@
                         </div>
                     </div>
                     <div class="summary-item animate-row" style="animation-delay: 0.45s;">
-                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg></div>
                         <div class="s-text">
                             <div class="s-label">Country</div>
                             <div class="s-colon">:</div>
@@ -620,7 +692,11 @@
                         </div>
                     </div>
                     <div class="summary-item animate-row" style="animation-delay: 0.53s;">
-                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></div>
+                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg></div>
                         <div class="s-text">
                             <div class="s-label">Moon Sign</div>
                             <div class="s-colon">:</div>
@@ -628,7 +704,13 @@
                         </div>
                     </div>
                     <div class="summary-item item-full-width animate-row" style="animation-delay: 0.61s;">
-                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="s-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="#6868f9" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg></div>
                         <div class="s-text">
                             <div class="s-label">Birth Star</div>
                             <div class="s-colon">:</div>
@@ -638,134 +720,474 @@
                 </div>
             </div>
 
-            <!-- Non-Manglik Dosha Result Card (Negative) -->
-            <div class="result-card manglik-result-card" id="manglikNegativeCard" style="display: none;">
-                <div class="manglik-result-inner">
-                    <div class="m-result-image-col">
-                        <div class="m-image-container">
-                            <img src="https://cdn.astroved.com/images/astropedia/freetools/manglik-dosha-icon.png" alt="Manglik Dosha Result">
-                            <div class="m-shield-check">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#34d399" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+            <!-- Non-Manglik Dosha Result Container -->
+            <div id="manglikNegativeCard"
+                style="display: none; width: 100%; display: flex; flex-direction: column; align-items: center;">
+                <div class="result-card non-manglik-card-new">
+                    <div class="nm-main-grid">
+
+                        <!-- Left Column: Result -->
+                        <div class="nm-left-col">
+                            <div class="nm-shield-icon-container">
+                                <div class="nm-shield-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
+                                        fill="#4ade80" stroke="#16a34a" stroke-width="1.5">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 12 11 14 15 10" stroke="#ffffff" stroke-width="2.5">
+                                        </polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="nm-text-content">
+                                <h2 class="nm-result-title">You are not under the<br>influence of Manglik Dosha</h2>
+                                <div class="nm-result-divider">
+                                    <span class="m-line"></span><span class="m-dot">✦</span><span class="m-line"></span>
+                                </div>
+                                <p class="nm-result-desc">Great! As per the calculated positions of Mars in your birth
+                                    chart, you are not affected by Manglik Dosha.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="m-result-text-col">
-                        <div class="m-badge-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#65a30d" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+
+                        <!-- Right Column: Talk Card -->
+                        <div class="nm-right-col">
+                            <div class="nm-talk-card">
+                                <div class="nm-talk-header">
+                                    <div class="nm-talk-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="1.5">
+                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="nm-talk-text">
+                                        <h4>Need Personalized Guidance?</h4>
+                                        <p>Talk to our expert astrologers and get clarity on your queries.</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-talk-negative">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" class="talk-icon">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    <span>Talk with Astrologer</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                                <div class="nm-trust-badges">
+                                    <div class="nm-badge">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="1.5">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                            <polyline points="9 12 11 14 15 10"></polyline>
+                                        </svg>
+                                        <span>100%<br>Confidential</span>
+                                    </div>
+                                    <div class="nm-badge">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="1.5">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                        <span>Verified<br>Astrologers</span>
+                                    </div>
+                                    <div class="nm-badge">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="1.5">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        <span>Available<br>24x7</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h2 class="m-result-title">You are not under the<br>influence of Manglik Dosha</h2>
-                        <div class="m-result-divider">
-                            <span class="m-line"></span>
-                            <span class="m-dot"></span>
-                            <span class="m-line"></span>
-                        </div>
-                        <p class="m-result-desc">Great! As per the calculated positions of Mars in your birth chart, you are not affected by Manglik Dosha.</p>
-                    </div>
+                    </div> <!-- Ends nm-main-grid -->
                 </div>
             </div>
 
             <!-- Manglik Dosha Result Card (Positive) -->
-            <div class="result-card manglik-positive-card" id="manglikPositiveCard" style="display: none;">
-                <div class="mp-header">
-                    <div class="mp-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="6"></circle><line x1="14.24" y1="9.76" x2="21" y2="3"></line><polyline points="15 3 21 3 21 9"></polyline></svg>
+            <div class="result-card manglik-positive-card-new" id="manglikPositiveCard" style="display: none;">
+
+                <!-- Top Header -->
+                <div class="mp-header-new">
+                    <div class="mp-icon-new">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="10" cy="14" r="6"></circle>
+                            <line x1="14.24" y1="9.76" x2="21" y2="3"></line>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                        </svg>
                     </div>
-                    <h2 class="mp-title">Manglik Report</h2>
-                    <div class="m-result-divider">
+                    <h2 class="mp-title-new">Manglik Report</h2>
+                    <p class="mp-subtitle-new">Here is your personalized Manglik analysis based on your birth chart.</p>
+                    <div class="mp-divider-new">
                         <span class="m-line"></span><span class="sh-star">✦</span><span class="m-line"></span>
                     </div>
-                    <p class="mp-subtitle">Here is your personalized Manglik analysis based on your birth chart.</p>
-                </div>
-                <div class="mp-body">
-                    <!-- Prediction Block -->
-                    <div class="mp-block prediction-block">
-                        <div class="mp-block-header">
-                            <div class="mp-block-icon" style="background: #eef2ff; color: #4f46e5;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                            </div>
-                            <h3 class="mp-block-title" style="color: #4f46e5;">Prediction</h3>
-                            <span class="sh-star" style="color: #d97706; margin-left:10px;">✦</span>
-                        </div>
-                        <div class="mp-block-content">
-                            <div class="mp-left-icon">
-                                <div class="mars-circle-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><circle cx="10" cy="14" r="6"></circle><line x1="14.24" y1="9.76" x2="21" y2="3"></line><polyline points="15 3 21 3 21 9"></polyline></svg>
-                                </div>
-                            </div>
-                            <div class="mp-text">
-                                <p>You have Mars in the 2nd House from the Moon in your birth chart. By this, you come under Manglik Dosha (Mars affliction). The second house signifies your speech, wealth, savings, family, ornaments, cheerfulness, learning, education, and knowledge.</p>
-                                <p>This placement of Mars is not appreciated in Vedic texts. By this position of Mars, you may face problems and have to battle tough situations in relationships. Your words could cause turbulence in your familial relationships. You may also face problems related to wealth or from your blood relations.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Remedies Block -->
-                    <div class="mp-block remedies-block">
-                        <div class="mp-block-header">
-                            <div class="mp-block-icon" style="background: #fffbeb; color: #d97706;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                            </div>
-                            <h3 class="mp-block-title" style="color: #d97706;">Remedies</h3>
-                            <span class="sh-star" style="color: #d97706; margin-left:10px;">✦</span>
-                        </div>
-                        <div class="mp-block-content">
-                            <div class="mp-left-icon">
-                                <div class="trishul-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2"><path d="M12 2v20M12 2l3 3M12 2L9 5M5 7v4a7 7 0 0 0 14 0V7"></path></svg>
-                                </div>
-                            </div>
-                            <div class="mp-text">
-                                <p>Appease Mars and propitiate Lord Muruga, the overlord of the fiery planet to reduce the malefic effects of Mars in the birth chart.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mp-email-banner">
-                    <!-- Decorative Backgrounds -->
-                    <div class="meb-bg-left"></div>
-                    <div class="meb-bg-right"></div>
-                    <span class="meb-star" style="top: 15%; left: 20%; font-size: 10px;">✦</span>
-                    <span class="meb-star" style="top: 60%; left: 8%; font-size: 14px;">✧</span>
-                    <span class="meb-star" style="top: 25%; right: 15%; font-size: 12px; color: #D4AF37;">✦</span>
-                    <span class="meb-star" style="top: 70%; right: 25%; font-size: 10px;">✧</span>
-
-                    <div class="meb-header-group">
-                        <div class="meb-icon-wrapper">
-                            <div class="meb-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><path d="M2 4l10 8 10-8"></path></svg>
-                            </div>
-                            <div class="meb-icon-ring"></div>
-                        </div>
-                        <div class="meb-title-divider">
-                            <span class="meb-line"></span>
-                            <span class="meb-dot"></span>
-                            <span class="meb-line"></span>
-                        </div>
-                        <h3 class="meb-title">Your Manglik Report is Ready!</h3>
-                    </div>
-                    <p class="meb-subtitle">Please submit your email ID to receive the Manglik Report in your email.</p>
-                    <form class="meb-form">
-                        <div class="meb-input-wrapper">
-                            <span class="meb-input-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><path d="M2 4l10 8 10-8"></path></svg>
-                            </span>
-                            <input type="email" placeholder="Enter your email ID" required>
-                        </div>
-                        <button type="submit" class="meb-submit-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                            Submit
-                        </button>
-                    </form>
                 </div>
 
-                <div class="mp-footer">
-                    <div class="mp-note-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+
+                <!-- Main Grid -->
+                <div class="mp-main-grid">
+                    <div class="mp-left-col">
+                        <!-- Prediction -->
+                        <div class="mp-block-new prediction-block-new">
+                            <div class="mp-left-icon-container">
+                                <div class="mars-circle-icon-new">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                                        fill="none" stroke="#be123c" stroke-width="2">
+                                        <circle cx="10" cy="14" r="6"></circle>
+                                        <line x1="14.24" y1="9.76" x2="21" y2="3"></line>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="mp-content-container">
+                                <h3 class="mp-block-title">Prediction <span class="sh-star"
+                                        style="color: #be123c; font-size: 14px; margin-left: 5px;">✦</span></h3>
+                                <p>You have Mars in the 2nd House from the Moon in your birth chart. By this, you come
+                                    under Manglik Dosha (Mars affliction). The second house signifies your speech,
+                                    wealth, savings, family, ornaments, cheerfulness, learning, education, and
+                                    knowledge.</p>
+                                <p>This placement of Mars is not appreciated in Vedic texts. By this position of Mars,
+                                    you may face problems and have to battle tough situations in relationships. Your
+                                    words could cause turbulence in your familial relationships. You may also face
+                                    problems related to wealth or from your blood relations.</p>
+                            </div>
+                        </div>
+
+                        <!-- Remedies -->
+                        <div class="mp-block-new remedies-block-new">
+                            <div class="mp-left-icon-container">
+                                <div class="trishul-icon-new">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                                        fill="none" stroke="#d97706" stroke-width="2">
+                                        <path d="M12 2v20M12 2l3 3M12 2L9 5M5 7v4a7 7 0 0 0 14 0V7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="mp-content-container">
+                                <h3 class="mp-block-title" style="color: #d97706;">Remedies <span class="sh-star"
+                                        style="color: #d97706; font-size: 14px; margin-left: 5px;">✦</span></h3>
+                                <p>Appease Mars and propitiate Lord Muruga, the overlord of the fiery planet to reduce
+                                    the malefic effects of Mars in the birth chart.</p>
+                            </div>
+                        </div>
                     </div>
-                    <p><strong>Note:</strong> The impact of Manglik Dosha varies based on the entire birth chart. A detailed analysis by an expert astrologer is recommended.</p>
+
+                    <div class="mp-right-col">
+                        <div class="mp-email-card-new">
+                            <div class="mec-icon-wrapper">
+                                <div class="mec-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+                                        <path d="M2 4l10 8 10-8"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 class="mec-title">Your Manglik Report<br>is Ready!</h3>
+                            <p class="mec-subtitle">Please submit your email ID to receive<br>the Manglik Report in your
+                                email.</p>
+                            <form class="mec-form">
+                                <div class="mec-input-wrapper">
+                                    <span class="mec-input-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="#be123c" stroke-width="2">
+                                            <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+                                            <path d="M2 4l10 8 10-8"></path>
+                                        </svg>
+                                    </span>
+                                    <input type="email" placeholder="Enter your email ID" required>
+                                </div>
+                                <button type="submit" class="mec-submit-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                    </svg>
+                                    Send Report
+                                </button>
+                            </form>
+
+                            <div class="mec-trust-badges">
+                                <div class="mec-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 12 11 14 15 10"></polyline>
+                                    </svg>
+                                    <span>100%<br>Confidential</span>
+                                </div>
+                                <div class="mec-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    <span>Verified<br>Astrologers</span>
+                                </div>
+                                <div class="mec-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span>Available<br>24x7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Note -->
+                <div class="mp-footer-note-new">
+                    <div class="mpn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="#be123c" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </div>
+                    <p><strong>Note:</strong> The impact of Manglik Dosha varies based on the entire birth chart.<br>A
+                        detailed analysis by an expert astrologer is recommended.</p>
+                </div>
+
+                <!-- Talk Banner -->
+                <div class="mp-talk-banner-new">
+                    <div class="mtb-left">
+                        <div class="mtb-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="#be123c" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="mtb-text">
+                            <h4>Want to Speak to an Astrologer?</h4>
+                            <p>Get personalized guidance and remedies for a harmonious life.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-talk-positive">Talk with Astrologer &rarr;</a>
                 </div>
             </div>
 
+            <!-- Recommended Homas Section -->
+            <div class="homa-section" id="homaSection" style="display: none;">
+                <div class="homa-header">
+                    <div class="homa-divider">
+                        <span class="h-line"></span>
+                        <span class="h-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 2v20"></path>
+                                <path d="M6 7v4a6 6 0 0 0 12 0V7"></path>
+                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                                <polyline points="10 5 12 2 14 5"></polyline>
+                                <polyline points="4 9 6 7 8 9"></polyline>
+                                <polyline points="16 9 18 7 20 9"></polyline>
+                            </svg>
+                        </span>
+                        <span class="h-line"></span>
+                    </div>
+                    <h3 class="homa-title">Recommended Homas</h3>
+                    <p class="homa-subtitle">Perform these powerful Homas to reduce the malefic effects of Manglik
+                        Dosha.</p>
+                </div>
+
+                <div class="homa-grid">
+                    <!-- Card 1 -->
+                    <div class="homa-card">
+                        <div class="homa-badge">01</div>
+                        <div class="homa-img-wrapper">
+                            <img src="images/mars.png" alt="Mangal Shanti Homa">
+                        </div>
+                        <div class="homa-card-content">
+                            <div class="homa-card-divider">
+                                <span class="hcd-line"></span>
+                                <span class="hcd-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="#be123c" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 2v20"></path>
+                                        <path d="M6 7v4a6 6 0 0 0 12 0V7"></path>
+                                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                                        <polyline points="10 5 12 2 14 5"></polyline>
+                                        <polyline points="4 9 6 7 8 9"></polyline>
+                                        <polyline points="16 9 18 7 20 9"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="hcd-line"></span>
+                            </div>
+                            <h4 class="homa-card-title">Mangal Shanti Homa</h4>
+                            <p class="homa-card-subtitle">(Mars Pacification Homa)</p>
+                            <a href="#" class="homa-btn">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="homa-card">
+                        <div class="homa-badge">02</div>
+                        <div class="homa-img-wrapper">
+                            <img src="images/murugar.png" alt="Valli Devayani Samedha Murugan Homa">
+                        </div>
+                        <div class="homa-card-content">
+                            <div class="homa-card-divider">
+                                <span class="hcd-line"></span>
+                                <span class="hcd-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="#be123c" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 2v20"></path>
+                                        <path d="M12 2C8 7 8 12 12 15C16 12 16 7 12 2Z"></path>
+                                    </svg>
+                                </span>
+                                <span class="hcd-line"></span>
+                            </div>
+                            <h4 class="homa-card-title">Valli Devayani Samedha<br>Murugan Homa</h4>
+                            <p class="homa-card-subtitle">(Homa for Muruga and his consorts Valli and Devayani)</p>
+                            <a href="#" class="homa-btn">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="homa-card">
+                        <div class="homa-badge">03</div>
+                        <div class="homa-img-wrapper">
+                            <img src="images/shiva.png" alt="Shiva Shakti and Kamadeva Homa">
+                        </div>
+                        <div class="homa-card-content">
+                            <div class="homa-card-divider">
+                                <span class="hcd-line"></span>
+                                <span class="hcd-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="#be123c" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 22v-3"></path>
+                                        <path d="M12 19c-3.3 0-6-2.7-6-6s6-11 6-11 6 7.7 6 11-2.7 6-6 6z"></path>
+                                        <path d="M6 13c-2.8 0-5 2.2-5 5s5 3 7 1c-1.3-1.6-2-3.8-2-6z"></path>
+                                        <path d="M18 13c2.8 0 5 2.2 5 5s-5 3-7 1c1.3-1.6 2-3.8 2-6z"></path>
+                                    </svg>
+                                </span>
+                                <span class="hcd-line"></span>
+                            </div>
+                            <h4 class="homa-card-title">Shiva Shakti and Kamadeva Homa</h4>
+                            <p class="homa-card-subtitle">(Shiva-Shakti Homa also by invoking Kamadeva, the God of love)
+                            </p>
+                            <a href="#" class="homa-btn">View Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Powerful Remedies Section (Hidden initially, shown for Non-Manglik) -->
+            <div id="powerfulRemediesSection" class="powerful-remedies-section" style="display: none; width: 100%; margin-top: 50px;">
+                <div class="container">
+                <div class="remedies-header" style="text-align: center; margin-bottom: 40px;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px;">
+                        <span style="height: 1px; width: 30px; background: #9ca3af;"></span>
+                        <div style="background: #f0fdf4; border: 1px solid #dcfce7; padding: 6px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#16a34a" stroke="#16a34a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10" stroke="#ffffff"></polyline></svg>
+                        </div>
+                        <span style="height: 1px; width: 30px; background: #9ca3af;"></span>
+                    </div>
+                    <h2 style="font-size: 32px; color: #064e3b; font-family: 'Playfair Display', serif; margin: 0 0 10px 0;">Powerful Remedies for Manglik Dosha</h2>
+                    <p style="color: #475569; font-size: 16px; max-width: 600px; margin: 0 auto;">Explore trusted remedies and services to reduce the malefic effects and bring harmony, love, and happiness into your life.</p>
+                </div>
+
+                <div class="remedies-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; max-width: 900px; margin: 0 auto;">
+                    
+                    <!-- Card 1: Marriage -->
+                    <div class="remedy-card" style="background: #fffbf9; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center; padding-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #ffedd5;">
+                        <div style="position: relative; width: 100%; height: 180px;">
+                            <img src="images/quick.png" alt="Marriage Image Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-top-left-radius: 16px; border-top-right-radius: 16px; background: #f1f5f9; display: block;">
+                            <div style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: #fff7ed; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 3px solid #ffffff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="11" r="4"></circle>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 7.13a4 4 0 0 1 0 7.75"></path>
+                                    <path d="M12 7.5C11.5 6 9 6 9 8C9 10.5 12 13 12 13C12 13 15 10.5 15 8C15 6 12.5 6 12 7.5Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div style="padding: 45px 25px 0; display: flex; flex-direction: column; flex-grow: 1; width: 100%; box-sizing: border-box;">
+                            <h3 style="color: #7c2d12; font-size: 20px; font-family: 'Playfair Display', serif; margin: 0 0 15px 0; line-height: 1.3;">Remed for<br>Quick Marriage</h3>
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                                <span style="height: 1px; width: 20px; background: #fdba74;"></span>
+                                <span style="width: 6px; height: 6px; background: #ea580c; transform: rotate(45deg);"></span>
+                                <span style="height: 1px; width: 20px; background: #fdba74;"></span>
+                            </div>
+                            <p style="color: #475569; font-size: 13px; line-height: 1.5; margin-bottom: 25px; flex-grow: 1;">Powerful rituals and homas to remove delays and bless you with a happy and timely marriage.</p>
+                            <a href="#" style="display: inline-block; width: 100%; background: #e87a27; color: #ffffff; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background 0.3s ease; box-sizing: border-box;">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Kundali -->
+                    <div class="remedy-card" style="background: #f5fcf7; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center; padding-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #dcfce7;">
+                        <div style="position: relative; width: 100%; height: 180px;">
+                            <img src="images/kundali.png" alt="Kundali Image Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-top-left-radius: 16px; border-top-right-radius: 16px; background: #f1f5f9; display: block;">
+                            <div style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: #f0fdf4; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 3px solid #ffffff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.5">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <circle cx="12" cy="14" r="3"></circle>
+                                    <path d="M12 11v-1"></path>
+                                    <path d="M12 18v-1"></path>
+                                    <path d="M9 14H8"></path>
+                                    <path d="M16 14h-1"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div style="padding: 45px 25px 0; display: flex; flex-direction: column; flex-grow: 1; width: 100%; box-sizing: border-box;">
+                            <h3 style="color: #14532d; font-size: 20px; font-family: 'Playfair Display', serif; margin: 0 0 15px 0; line-height: 1.3;">Free AI<br>Kundali Report</h3>
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                                <span style="height: 1px; width: 20px; background: #86efac;"></span>
+                                <span style="width: 6px; height: 6px; background: #16a34a; transform: rotate(45deg);"></span>
+                                <span style="height: 1px; width: 20px; background: #86efac;"></span>
+                            </div>
+                            <p style="color: #475569; font-size: 13px; line-height: 1.5; margin-bottom: 25px; flex-grow: 1;">Get an instant, comprehensive analysis of your birth chart. Discover your planetary positions, doshas, and predictions powered by cutting-edge AI.</p>
+                            <a href="#" style="display: inline-block; width: 100%; background: #5a9e64; color: #ffffff; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background 0.3s ease; box-sizing: border-box;">Generate Report &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Matrimony -->
+                    <div class="remedy-card" style="background: #fff5f8; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center; padding-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #fce7f3;">
+                        <div style="position: relative; width: 100%; height: 180px;">
+                            <img src="images/matrimony.png" alt="Matrimony Image Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-top-left-radius: 16px; border-top-right-radius: 16px; background: #f1f5f9; display: block;">
+                            <div style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: #fdf2f8; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 3px solid #ffffff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="1.5">
+                                    <circle cx="8" cy="14" r="5"></circle>
+                                    <circle cx="16" cy="14" r="5"></circle>
+                                    <path d="M12 4l2 3h-4z"></path>
+                                    <line x1="10" y1="7" x2="14" y2="7"></line>
+                                    <line x1="12" y1="7" x2="12" y2="10"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div style="padding: 45px 25px 0; display: flex; flex-direction: column; flex-grow: 1; width: 100%; box-sizing: border-box;">
+                            <h3 style="color: #831843; font-size: 20px; font-family: 'Playfair Display', serif; margin: 0 0 15px 0; line-height: 1.3;">Matrimony<br>Solutions</h3>
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                                <span style="height: 1px; width: 20px; background: #f9a8d4;"></span>
+                                <span style="width: 6px; height: 6px; background: #db2777; transform: rotate(45deg);"></span>
+                                <span style="height: 1px; width: 20px; background: #f9a8d4;"></span>
+                            </div>
+                            <p style="color: #475569; font-size: 13px; line-height: 1.5; margin-bottom: 25px; flex-grow: 1;">Astrological guidance and remedies to help find the right match and ensure a blissful married life.</p>
+                            <a href="#" style="display: inline-block; width: 100%; background: #cd547a; color: #ffffff; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background 0.3s ease; box-sizing: border-box;">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1161,10 +1583,18 @@
     <!-- Why Choose Guidance Features Section -->
     <section class="guidance-features-section">
         <div class="gf-bg-left">
-            <svg viewBox="0 0 100 100" fill="rgba(212, 175, 55, 0.2)" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 C 60 40, 90 40, 90 50 C 90 60, 60 60, 50 90 C 40 60, 10 60, 10 50 C 10 40, 40 40, 50 10 Z"></path></svg>
+            <svg viewBox="0 0 100 100" fill="rgba(212, 175, 55, 0.2)" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M50 10 C 60 40, 90 40, 90 50 C 90 60, 60 60, 50 90 C 40 60, 10 60, 10 50 C 10 40, 40 40, 50 10 Z">
+                </path>
+            </svg>
         </div>
         <div class="gf-bg-right">
-            <svg viewBox="0 0 100 100" fill="rgba(104, 104, 249, 0.15)" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="rgba(104, 104, 249, 0.1)" stroke-width="1" stroke-dasharray="4 4" /><circle cx="50" cy="50" r="30" stroke="rgba(104, 104, 249, 0.2)" stroke-width="1" /></svg>
+            <svg viewBox="0 0 100 100" fill="rgba(104, 104, 249, 0.15)" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" stroke="rgba(104, 104, 249, 0.1)" stroke-width="1"
+                    stroke-dasharray="4 4" />
+                <circle cx="50" cy="50" r="30" stroke="rgba(104, 104, 249, 0.2)" stroke-width="1" />
+            </svg>
         </div>
 
         <div class="gf-header">
@@ -1176,7 +1606,8 @@
                 <div class="gf-sd-line right"></div>
             </div>
             <h2 class="gf-title">Why Choose <span class="purple-text">Mangal Dosha</span> Guidance?</h2>
-            <p class="gf-subtitle">Mangal Dosha affects relationships, marriage timing and harmony. Understanding it helps you make the right decisions and bring positivity into your life.</p>
+            <p class="gf-subtitle">Mangal Dosha affects relationships, marriage timing and harmony. Understanding it
+                helps you make the right decisions and bring positivity into your life.</p>
         </div>
 
         <div class="gf-container">
@@ -1184,7 +1615,13 @@
                 <!-- Item 1 -->
                 <div class="gf-item anim-zoom">
                     <div class="gf-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><polyline points="7 12 9.5 9 11.5 11 14 8"></polyline><circle cx="14" cy="8" r="1.5" fill="currentColor"></circle></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            <polyline points="7 12 9.5 9 11.5 11 14 8"></polyline>
+                            <circle cx="14" cy="8" r="1.5" fill="currentColor"></circle>
+                        </svg>
                     </div>
                     <h3 class="gf-item-title">Accurate Analysis</h3>
                     <div class="gf-h-divider">
@@ -1192,14 +1629,27 @@
                         <div class="gf-h-dot"></div>
                         <div class="gf-h-line"></div>
                     </div>
-                    <p class="gf-item-desc">Detailed analysis of your birth chart to identify Mangal Dosha with precision.</p>
+                    <p class="gf-item-desc">Detailed analysis of your birth chart to identify Mangal Dosha with
+                        precision.</p>
                     <div class="gf-diamond">✦</div>
                 </div>
 
                 <!-- Item 2 -->
                 <div class="gf-item anim-glow">
                     <div class="gf-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.9 1.2 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path><line x1="12" y1="2" x2="12" y2="4"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="22" y1="12" x2="20" y2="12"></line></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.9 1.2 1.5 1.5 2.5">
+                            </path>
+                            <path d="M9 18h6"></path>
+                            <path d="M10 22h4"></path>
+                            <line x1="12" y1="2" x2="12" y2="4"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="19.78" y1="4.22" x2="18.36" y2="5.64"></line>
+                            <line x1="2" y1="12" x2="4" y2="12"></line>
+                            <line x1="22" y1="12" x2="20" y2="12"></line>
+                        </svg>
                     </div>
                     <h3 class="gf-item-title">Clear Understanding</h3>
                     <div class="gf-h-divider">
@@ -1207,14 +1657,19 @@
                         <div class="gf-h-dot"></div>
                         <div class="gf-h-line"></div>
                     </div>
-                    <p class="gf-item-desc">Understand how Mangal Dosha is affecting your life, relationships and future.</p>
+                    <p class="gf-item-desc">Understand how Mangal Dosha is affecting your life, relationships and
+                        future.</p>
                     <div class="gf-diamond">✦</div>
                 </div>
 
                 <!-- Item 3 -->
                 <div class="gf-item anim-bounce">
                     <div class="gf-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <polyline points="9 12 11 14 15 10"></polyline>
+                        </svg>
                     </div>
                     <h3 class="gf-item-title">Effective Remedies</h3>
                     <div class="gf-h-divider">
@@ -1222,14 +1677,20 @@
                         <div class="gf-h-dot"></div>
                         <div class="gf-h-line"></div>
                     </div>
-                    <p class="gf-item-desc">Personalized remedies and solutions to reduce the negative effects of Mangal Dosha.</p>
+                    <p class="gf-item-desc">Personalized remedies and solutions to reduce the negative effects of Mangal
+                        Dosha.</p>
                     <div class="gf-diamond">✦</div>
                 </div>
 
                 <!-- Item 4 -->
                 <div class="gf-item anim-pulse">
                     <div class="gf-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="gf-item-title">Better Relationships</h3>
                     <div class="gf-h-divider">
@@ -1244,7 +1705,14 @@
                 <!-- Item 5 -->
                 <div class="gf-item anim-tick">
                     <div class="gf-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="7"></circle><polyline points="9 8 9 12 12 12"></polyline><line x1="19" y1="9" x2="22" y2="9"></line><line x1="18" y1="12" x2="23" y2="12"></line><line x1="19" y1="15" x2="22" y2="15"></line></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="12" r="7"></circle>
+                            <polyline points="9 8 9 12 12 12"></polyline>
+                            <line x1="19" y1="9" x2="22" y2="9"></line>
+                            <line x1="18" y1="12" x2="23" y2="12"></line>
+                            <line x1="19" y1="15" x2="22" y2="15"></line>
+                        </svg>
                     </div>
                     <h3 class="gf-item-title">Timing & Compatibility</h3>
                     <div class="gf-h-divider">
@@ -1252,14 +1720,20 @@
                         <div class="gf-h-dot"></div>
                         <div class="gf-h-line"></div>
                     </div>
-                    <p class="gf-item-desc">Helps in matching compatibility and choosing the right time for marriage.</p>
+                    <p class="gf-item-desc">Helps in matching compatibility and choosing the right time for marriage.
+                    </p>
                     <div class="gf-diamond">✦</div>
                 </div>
 
                 <!-- Item 6 -->
                 <div class="gf-item anim-float">
                     <div class="gf-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 8v8"></path><path d="M8 12l4 4 4-4"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M12 8v8"></path>
+                            <path d="M8 12l4 4 4-4"></path>
+                        </svg>
                     </div>
                     <h3 class="gf-item-title">Peace of Mind</h3>
                     <div class="gf-h-divider">
@@ -1267,7 +1741,8 @@
                         <div class="gf-h-dot"></div>
                         <div class="gf-h-line"></div>
                     </div>
-                    <p class="gf-item-desc">Gain confidence, clarity and peace of mind through proper guidance and remedies.</p>
+                    <p class="gf-item-desc">Gain confidence, clarity and peace of mind through proper guidance and
+                        remedies.</p>
                 </div>
             </div>
         </div>
@@ -1295,18 +1770,32 @@
                     <div class="faq-question">
                         <div class="faq-icon-group">
                             <div class="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
                             </div>
                             <div class="faq-v-divider"></div>
                         </div>
                         <h3 class="faq-q-text">What is Mangal Dosha (Manglik Dosha)?</h3>
                         <button class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </button>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>Mangal Dosha is an astrological condition caused by the placement of Mars in certain houses of the birth chart. It is believed to affect marital harmony and relationships.</p>
+                            <p>Mangal Dosha is an astrological condition caused by the placement of Mars in certain
+                                houses of the birth chart. It is believed to affect marital harmony and relationships.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1316,18 +1805,24 @@
                     <div class="faq-question">
                         <div class="faq-icon-group">
                             <div class="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 12A10 4 0 0 1 2 12A10 4 0 0 1 22 12"></path><circle cx="12" cy="12" r="6"></circle></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M22 12A10 4 0 0 1 2 12A10 4 0 0 1 22 12"></path>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                </svg>
                             </div>
                             <div class="faq-v-divider"></div>
                         </div>
                         <h3 class="faq-q-text">Which houses indicate Mangal Dosha?</h3>
                         <button class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </button>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>The 1st, 2nd, 4th, 7th, 8th, and 12th houses in the birth chart are typically considered for indicating Mangal Dosha.</p>
+                            <p>The 1st, 2nd, 4th, 7th, 8th, and 12th houses in the birth chart are typically considered
+                                for indicating Mangal Dosha.</p>
                         </div>
                     </div>
                 </div>
@@ -1337,18 +1832,25 @@
                     <div class="faq-question">
                         <div class="faq-icon-group">
                             <div class="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 22L12 14L16 22"></path><path d="M12 14V4L9 9"></path><path d="M12 4L15 9"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M8 22L12 14L16 22"></path>
+                                    <path d="M12 14V4L9 9"></path>
+                                    <path d="M12 4L15 9"></path>
+                                </svg>
                             </div>
                             <div class="faq-v-divider"></div>
                         </div>
                         <h3 class="faq-q-text">Does Mangal Dosha always cause problems in marriage?</h3>
                         <button class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </button>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>No, not always. The effects depend on the exact placement of Mars and other planetary positions. In many cases, the dosha gets canceled automatically.</p>
+                            <p>No, not always. The effects depend on the exact placement of Mars and other planetary
+                                positions. In many cases, the dosha gets canceled automatically.</p>
                         </div>
                     </div>
                 </div>
@@ -1358,18 +1860,27 @@
                     <div class="faq-question">
                         <div class="faq-icon-group">
                             <div class="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="12 2 2 7 12 22 22 7 12 2"></polygon><polyline points="2 7 12 7 22 7"></polyline><polyline points="12 22 12 7"></polyline><polyline points="7 7 12 2"></polyline><polyline points="17 7 12 2"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polygon points="12 2 2 7 12 22 22 7 12 2"></polygon>
+                                    <polyline points="2 7 12 7 22 7"></polyline>
+                                    <polyline points="12 22 12 7"></polyline>
+                                    <polyline points="7 7 12 2"></polyline>
+                                    <polyline points="17 7 12 2"></polyline>
+                                </svg>
                             </div>
                             <div class="faq-v-divider"></div>
                         </div>
                         <h3 class="faq-q-text">Can Mangal Dosha be removed or reduced?</h3>
                         <button class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </button>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>Yes, specific Vedic remedies, poojas, and lifestyle changes can significantly reduce the negative impact of Mangal Dosha.</p>
+                            <p>Yes, specific Vedic remedies, poojas, and lifestyle changes can significantly reduce the
+                                negative impact of Mangal Dosha.</p>
                         </div>
                     </div>
                 </div>
@@ -1379,18 +1890,25 @@
                     <div class="faq-question">
                         <div class="faq-icon-group">
                             <div class="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 8v8"></path><path d="M8 12l4 4 4-4"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    <path d="M12 8v8"></path>
+                                    <path d="M8 12l4 4 4-4"></path>
+                                </svg>
                             </div>
                             <div class="faq-v-divider"></div>
                         </div>
                         <h3 class="faq-q-text">What are the best remedies for Mangal Dosha?</h3>
                         <button class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </button>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>Some common remedies include Kumbh Vivah, chanting Hanuman Chalisa, fasting on Tuesdays, and wearing specific gemstones like Red Coral.</p>
+                            <p>Some common remedies include Kumbh Vivah, chanting Hanuman Chalisa, fasting on Tuesdays,
+                                and wearing specific gemstones like Red Coral.</p>
                         </div>
                     </div>
                 </div>
@@ -1400,18 +1918,29 @@
                     <div class="faq-question">
                         <div class="faq-icon-group">
                             <div class="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    <path d="M8 14h.01"></path>
+                                    <path d="M12 14h.01"></path>
+                                    <path d="M16 14h.01"></path>
+                                </svg>
                             </div>
                             <div class="faq-v-divider"></div>
                         </div>
                         <h3 class="faq-q-text">How can I know if I have Mangal Dosha in my horoscope?</h3>
                         <button class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </button>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>You can use an accurate Mangal Dosha calculator or consult a qualified Vedic astrologer to analyze your birth chart.</p>
+                            <p>You can use an accurate Mangal Dosha calculator or consult a qualified Vedic astrologer
+                                to analyze your birth chart.</p>
                         </div>
                     </div>
                 </div>
@@ -1422,141 +1951,161 @@
 
     <!-- Footer Section -->
     <footer class="footer-section">
-      <div class="footer-container">
-        <div class="footer-grid">
-          
-          <!-- Column 1: KNOW US -->
-          <div class="footer-col">
-            <h4 class="footer-heading">KNOW US</h4>
-            <ul class="footer-links">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Board Of Advisors</a></li>
-              <li><a href="#">R&D Institute</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Partner Sites</a></li>
-              <li><a href="#">Blogs</a></li>
-              <li><a href="#">Articles</a></li>
-              <li><a href="#">Podcast</a></li>
-            </ul>
-          </div>
-          
-          <!-- Column 2: ASTROWORLD -->
-          <div class="footer-col">
-            <h4 class="footer-heading">ASTROWORLD</h4>
-            <ul class="footer-links">
-              <li><a href="#">Astrology Services</a></li>
-              <li><a href="#">Astropedia</a></li>
-              <li><a href="#">Priest Services</a></li>
-              <li><a href="#">Love & Marriage</a></li>
-              <li><a href="#">Family</a></li>
-              <li><a href="#">Business & Career</a></li>
-              <li><a href="#">Wealth & Finance</a></li>
-              <li><a href="#">Education</a></li>
-              <li><a href="#">Health & Beauty</a></li>
-            </ul>
-          </div>
-          
-          <!-- Column 3: LEGAL -->
-          <div class="footer-col">
-            <h4 class="footer-heading">LEGAL</h4>
-            <ul class="footer-links">
-              <li><a href="#">Disclaimer</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Return & Refund Policy</a></li>
-              <li><a href="#">Security Policy</a></li>
-              <li><a href="#">Shipment Policy</a></li>
-              <li><a href="#">Terms and Conditions</a></li>
-            </ul>
-          </div>
-          
-          <!-- Column 4: SUPPORT -->
-          <div class="footer-col">
-            <h4 class="footer-heading">SUPPORT</h4>
-            <ul class="footer-links">
-              <li><a href="mailto:support@astroved.com">support@astroved.com</a></li>
-              <li><a href="#">Offline Payment</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Feedback</a></li>
-              <li><a href="#">Site Map</a></li>
-            </ul>
-          </div>
-          
-          <!-- Column 5: CONNECT -->
-          <div class="footer-col connect-col">
-            <h4 class="footer-heading">CONNECT</h4>
-            <div class="connect-info">
-                <p><strong>Customer Care</strong></p>
-                <p><a href="tel:+919677391108">+91 9677391108</a></p>
-                <p><a href="tel:+914443419898">+91 44 43419898</a></p>
+        <div class="footer-container">
+            <div class="footer-grid">
+
+                <!-- Column 1: KNOW US -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">KNOW US</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Board Of Advisors</a></li>
+                        <li><a href="#">R&D Institute</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Partner Sites</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">Podcast</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: ASTROWORLD -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">ASTROWORLD</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Astrology Services</a></li>
+                        <li><a href="#">Astropedia</a></li>
+                        <li><a href="#">Priest Services</a></li>
+                        <li><a href="#">Love & Marriage</a></li>
+                        <li><a href="#">Family</a></li>
+                        <li><a href="#">Business & Career</a></li>
+                        <li><a href="#">Wealth & Finance</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Health & Beauty</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: LEGAL -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">LEGAL</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Return & Refund Policy</a></li>
+                        <li><a href="#">Security Policy</a></li>
+                        <li><a href="#">Shipment Policy</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: SUPPORT -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">SUPPORT</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@astroved.com">support@astroved.com</a></li>
+                        <li><a href="#">Offline Payment</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Site Map</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: CONNECT -->
+                <div class="footer-col connect-col">
+                    <h4 class="footer-heading">CONNECT</h4>
+                    <div class="connect-info">
+                        <p><strong>Customer Care</strong></p>
+                        <p><a href="tel:+919677391108">+91 9677391108</a></p>
+                        <p><a href="tel:+914443419898">+91 44 43419898</a></p>
+                    </div>
+                    <div class="connect-info">
+                        <p><strong>Toll Free (India Only)</strong></p>
+                        <p><a href="tel:18001029098">1800 102 9098</a></p>
+                    </div>
+                    <div class="connect-info">
+                        <p><strong>USA Contact Number</strong></p>
+                        <p><a href="tel:+14129273625">+1 412-927 3625</a></p>
+                    </div>
+                    <div class="connect-info">
+                        <p><strong>Whatsapp</strong></p>
+                        <p><a href="https://wa.me/919677391109">+91 9677391109</a></p>
+                    </div>
+                </div>
+
             </div>
-            <div class="connect-info">
-                <p><strong>Toll Free (India Only)</strong></p>
-                <p><a href="tel:18001029098">1800 102 9098</a></p>
+
+            <!-- Bottom Features Row (App Download & Trust Badges) -->
+            <div class="bottom-features-row">
+                <div class="app-download-section">
+                    <h5 class="app-download-heading">Download AstroVed App</h5>
+                    <div class="app-buttons">
+                        <a href="#" class="app-link" aria-label="Download on Google Play">
+                            <img src="https://cdn.astroved.com/images/images-av/play-store.png" alt="Google Play Store"
+                                style="height: 40px; width: auto; border-radius: 6px;">
+                        </a>
+                        <a href="#" class="app-link" aria-label="Download on the App Store">
+                            <img src="https://cdn.astroved.com/images/images-av/app-store.png" alt="Apple App Store"
+                                style="height: 40px; width: auto; border-radius: 6px;">
+                        </a>
+                    </div>
+                </div>
+                <div class="badges-container">
+                    <img src="https://cdn.astroved.com/images/images-av/years-of-services.png" alt="25 Years Excellence"
+                        class="trust-badge-img" style="height: 70px;">
+                    <img src="https://cdn.astroved.com/images/images-av/podbean-logo.png" alt="PodBean Downloads"
+                        class="trust-badge-img" style="height: 45px;">
+                    <img src="https://cdn.astroved.com/images/images-av/iso.png" alt="ISO 9001:2015 Certified"
+                        class="trust-badge-img" style="height: 45px;">
+                    <img src="https://cdn.astroved.com/images/images-av/sectigo_trust_seal.jpg" alt="Secured by Sectigo"
+                        class="trust-badge-img" style="height: 45px;">
+                </div>
             </div>
-            <div class="connect-info">
-                <p><strong>USA Contact Number</strong></p>
-                <p><a href="tel:+14129273625">+1 412-927 3625</a></p>
-            </div>
-            <div class="connect-info">
-                <p><strong>Whatsapp</strong></p>
-                <p><a href="https://wa.me/919677391109">+91 9677391109</a></p>
-            </div>
-          </div>
-          
         </div>
-        
-        <!-- Bottom Features Row (App Download & Trust Badges) -->
-        <div class="bottom-features-row">
-            <div class="app-download-section">
-                <h5 class="app-download-heading">Download AstroVed App</h5>
-                <div class="app-buttons">
-                    <a href="#" class="app-link" aria-label="Download on Google Play">
-                        <img src="https://cdn.astroved.com/images/images-av/play-store.png" alt="Google Play Store" style="height: 40px; width: auto; border-radius: 6px;">
+
+        <div class="footer-bottom-bar">
+            <div class="footer-container bottom-bar-inner">
+                <div class="copyright-wrapper">
+                    <p class="copyright">&copy; 2001 - 2026 AstroVed - All rights reserved.</p>
+                </div>
+                <div class="social-wrapper">
+                    <span>Follow us :</span>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <img src="https://cdn.astroved.com/images/images-av/facebook.webp" alt="Facebook" width="28"
+                            height="28">
                     </a>
-                    <a href="#" class="app-link" aria-label="Download on the App Store">
-                        <img src="https://cdn.astroved.com/images/images-av/app-store.png" alt="Apple App Store" style="height: 40px; width: auto; border-radius: 6px;">
+                    <a href="#" class="social-icon" aria-label="WhatsApp">
+                        <img src="https://cdn.astroved.com/images/images-av/whatsapp.webp" alt="WhatsApp" width="28"
+                            height="28">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <img src="https://cdn.astroved.com/images/images-av/Twitter.webp" alt="Twitter" width="28"
+                            height="28">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <img src="https://cdn.astroved.com/images/images-av/youtube.webp" alt="YouTube" width="28"
+                            height="28">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <img src="https://cdn.astroved.com/images/images-av/instagram.webp" alt="Instagram" width="28"
+                            height="28">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <img src="https://cdn.astroved.com/images/images-av/linkedin.webp" alt="LinkedIn" width="28"
+                            height="28">
                     </a>
                 </div>
             </div>
-            <div class="badges-container">
-                <img src="https://cdn.astroved.com/images/images-av/years-of-services.png" alt="25 Years Excellence" class="trust-badge-img" style="height: 70px;">
-                <img src="https://cdn.astroved.com/images/images-av/podbean-logo.png" alt="PodBean Downloads" class="trust-badge-img" style="height: 45px;">
-                <img src="https://cdn.astroved.com/images/images-av/iso.png" alt="ISO 9001:2015 Certified" class="trust-badge-img" style="height: 45px;">
-                <img src="https://cdn.astroved.com/images/images-av/sectigo_trust_seal.jpg" alt="Secured by Sectigo" class="trust-badge-img" style="height: 45px;">
-            </div>
         </div>
-      </div>
-      
-      <div class="footer-bottom-bar">
-          <div class="footer-container bottom-bar-inner">
-              <div class="copyright-wrapper">
-                  <p class="copyright">&copy; 2001 - 2026 AstroVed - All rights reserved.</p>
-              </div>
-              <div class="social-wrapper">
-                  <span>Follow us :</span>
-                  <a href="#" class="social-icon" aria-label="Facebook">
-                      <img src="https://cdn.astroved.com/images/images-av/facebook.webp" alt="Facebook" width="28" height="28">
-                  </a>
-                  <a href="#" class="social-icon" aria-label="WhatsApp">
-                      <img src="https://cdn.astroved.com/images/images-av/whatsapp.webp" alt="WhatsApp" width="28" height="28">
-                  </a>
-                  <a href="#" class="social-icon" aria-label="Twitter">
-                      <img src="https://cdn.astroved.com/images/images-av/Twitter.webp" alt="Twitter" width="28" height="28">
-                  </a>
-                  <a href="#" class="social-icon" aria-label="YouTube">
-                      <img src="https://cdn.astroved.com/images/images-av/youtube.webp" alt="YouTube" width="28" height="28">
-                  </a>
-                  <a href="#" class="social-icon" aria-label="Instagram">
-                      <img src="https://cdn.astroved.com/images/images-av/instagram.webp" alt="Instagram" width="28" height="28">
-                  </a>
-                  <a href="#" class="social-icon" aria-label="LinkedIn">
-                      <img src="https://cdn.astroved.com/images/images-av/linkedin.webp" alt="LinkedIn" width="28" height="28">
-                  </a>
-              </div>
-          </div>
-      </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
 
     <!-- Scripts -->
 </body>

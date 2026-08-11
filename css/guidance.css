@@ -2,8 +2,8 @@
 /* --- Guidance & Remedies Section (3 Cards) ---                  */
 /* ============================================================== */
 .guidance-section {
-    padding: 60px 0 20px; /* Increased top padding to push content away from hero background */
-    margin-top: 20px; /* Added top margin to pull it away from hero section */
+    padding: 20px 0 20px;
+    margin-top: 0;
     position: relative;
     z-index: 5;
     background-color: #FFFDFB;

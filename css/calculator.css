@@ -119,8 +119,8 @@ body {
 .hero-header-content {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 10px;
-    /* Highly reduced bottom margin to eliminate empty vertical space */
+    margin: 0 auto 40px;
+    /* Increased bottom margin to push form further down and reduce overlap */
     position: relative;
     z-index: 5;
 }
@@ -333,7 +333,7 @@ body {
 .hero-image-left {
     position: absolute;
     pointer-events: none;
-    left: -350px;
+    left: -400px;
     top: 10px;
     /* Moved slightly downward */
     width: 300px;
@@ -357,7 +357,7 @@ body {
 .hero-image-right {
     position: absolute;
     pointer-events: none;
-    right: -280px;
+    right: -330px;
     /* Pushed further outward to avoid text overlap */
     top: 30px;
     /* Aligned vertically with Deity */
@@ -432,7 +432,8 @@ body {
     padding: 20px 40px;
     position: relative;
     z-index: 10;
-    max-width: 100%;
+    max-width: 960px;
+    margin: 120px auto 0;
     /* Removed overflow: hidden so dropdowns can overflow bottom edge */
     transition: all 0.4s ease;
 }
@@ -549,7 +550,7 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 16px;
-    align-items: flex-end;
+    align-items: stretch;
 }
 
 .calc-form-grid>.form-group {
@@ -587,13 +588,26 @@ body {
 }
 
 @media (min-width: 901px) {
-    .calc-form-grid>.form-group {
-        grid-column: span 3;
+    .calc-form-grid {
+        grid-template-columns: repeat(14, 1fr);
+    }
+
+    .calc-form-grid > .form-group:nth-child(1) {
+        grid-column: span 6; /* Birth Date */
+    }
+
+    .calc-form-grid > .form-group:nth-child(2) {
+        grid-column: span 8; /* Birth Time */
+    }
+
+    .calc-form-grid > .form-group:nth-child(3),
+    .calc-form-grid > .form-group:nth-child(4) {
+        grid-column: span 7; /* Birth Country & Birth City (equal width) */
     }
 
     .action-container.full-width,
     .action-group.full-width {
-        grid-column: span 6;
+        grid-column: span 14;
         margin-top: 5px;
     }
 }
@@ -607,13 +621,10 @@ body {
 .input-group.luxury-input input {
     width: 100%;
     height: 56px;
-    /* Increased height */
-    padding: 0 10px;
-    /* Reduced left padding to prevent text cutoff */
+    padding: 0 8px;
     border: 1px solid rgba(214, 170, 72, 0.3);
-    /* Thin golden border */
     border-radius: 16px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     color: #1e293b;
     outline: none;
@@ -628,10 +639,8 @@ body {
 .input-group.luxury-input select {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23d6aa48' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 10px center;
-    /* Moved arrow closer to edge */
-    padding-right: 28px;
-    /* Reduced right padding */
+    background-position: right 8px center;
+    padding-right: 24px;
     cursor: pointer;
 }
 
@@ -662,7 +671,7 @@ body {
 /* Action Box & Button */
 
 .btn-calculate.luxury-btn.new-design-btn {
-    background: linear-gradient(135deg, #5014C9 0%, #7641F4 100%);
+    background: linear-gradient(135deg, #FF6B00 0%, #E63900 100%);
     color: #ffffff;
     border: none;
     border-radius: 12px;
@@ -677,12 +686,12 @@ body {
     justify-content: center;
     gap: 15px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(80, 20, 201, 0.3);
+    box-shadow: 0 8px 25px rgba(230, 57, 0, 0.3);
 }
 
 .btn-calculate.luxury-btn.new-design-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(80, 20, 201, 0.4);
+    box-shadow: 0 12px 30px rgba(230, 57, 0, 0.4);
 }
 
 .btn-icon-left {
@@ -1013,14 +1022,18 @@ body {
     .hero-header-content {
         margin: 0 0 0 auto;
         width: 100%;
-        max-width: calc(100% - 180px); /* Increased to 180px to safely clear the deity's knee completely */
-        height: 300px; /* Restored to fixed height to anchor form card correctly */
-        padding: 40px 10px 0 5px; /* Restored original top padding */
+        max-width: calc(100% - 180px);
+        /* Increased to 180px to safely clear the deity's knee completely */
+        height: 300px;
+        /* Restored to fixed height to anchor form card correctly */
+        padding: 40px 10px 0 5px;
+        /* Restored original top padding */
         box-sizing: border-box;
         text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* Moved text back up */
+        justify-content: flex-start;
+        /* Moved text back up */
         align-items: center;
     }
 
@@ -1039,13 +1052,15 @@ body {
     }
 
     .hero-title .dark-text {
-        font-size: 24px; /* Reduced from 32px to fit small screens */
+        font-size: 24px;
+        /* Reduced from 32px to fit small screens */
         font-weight: 700;
         color: #2D205A;
     }
 
     .hero-title .gold-text {
-        font-size: 26px; /* Reduced from 34px */
+        font-size: 26px;
+        /* Reduced from 34px */
         font-weight: 700;
         color: #BC8624;
     }
@@ -1056,7 +1071,8 @@ body {
 
     .hero-subtitle {
         max-width: 260px;
-        font-size: 12px; /* Reduced from 13px */
+        font-size: 12px;
+        /* Reduced from 13px */
         line-height: 1.35;
         color: #333333;
         font-weight: 500;
@@ -1316,7 +1332,7 @@ body {
         /* Reduced from 410px to close the huge empty gap between image and text */
         height: 390px !important;
         /* Fixed height to anchor the form card to the bottom of the banner */
-        padding: 60px 20px 0 20px !important; 
+        padding: 60px 20px 0 20px !important;
         box-sizing: border-box !important;
         text-align: center !important;
         display: flex !important;
@@ -1344,7 +1360,8 @@ body {
         grid-template-columns: 1fr 1fr !important;
         display: grid !important;
         gap: 16px !important;
-        align-items: flex-start !important; /* Prevent items from stretching, which causes huge gaps in Birth Time */
+        align-items: flex-start !important;
+        /* Prevent items from stretching, which causes huge gaps in Birth Time */
     }
 
     .calc-form-grid>.form-group,
@@ -1383,10 +1400,12 @@ body {
 /* ============================================================== */
 @media (max-width: 380px) {
     .hero-header-content {
-        padding: 40px 5px 0 5px !important; /* Keep the same top padding as other mobile screens for consistency */
-        max-width: calc(100% - 150px) !important; /* Slightly less safe space, but banner scales down so it's fine */
+        padding: 40px 5px 0 5px !important;
+        /* Keep the same top padding as other mobile screens for consistency */
+        max-width: calc(100% - 150px) !important;
+        /* Slightly less safe space, but banner scales down so it's fine */
     }
-    
+
     .title-pill-badge {
         font-size: 9px !important;
         padding: 4px 8px !important;
@@ -1394,7 +1413,8 @@ body {
     }
 
     .hero-title .dark-text {
-        font-size: 20px !important; /* Shrunk down to fit narrow screen */
+        font-size: 20px !important;
+        /* Shrunk down to fit narrow screen */
     }
 
     .hero-title .gold-text {
@@ -1418,8 +1438,13 @@ body {
 }
 
 /* Match the exact width for columns */
-.input-group.col-3 .custom-select-wrapper { width: calc(33.33% - 8px); }
-.input-group.col-4 .custom-select-wrapper { width: calc(25% - 9px); }
+.input-group.col-3 .custom-select-wrapper {
+    width: calc(33.33% - 8px);
+}
+
+.input-group.col-4 .custom-select-wrapper {
+    width: calc(25% - 9px);
+}
 
 .custom-select-trigger {
     width: 100%;
@@ -1501,7 +1526,8 @@ body {
 .custom-option:hover {
     background-color: #F8F5FF;
     color: #5C45FF;
-    padding-left: 20px; /* Slide effect */
+    padding-left: 20px;
+    /* Slide effect */
 }
 
 .custom-option.selected {
@@ -1513,10 +1539,12 @@ body {
 .custom-options-container::-webkit-scrollbar {
     width: 6px;
 }
+
 .custom-options-container::-webkit-scrollbar-track {
     background: #F3EEFF;
     border-radius: 4px;
 }
+
 .custom-options-container::-webkit-scrollbar-thumb {
     background: #c3b5eb;
     border-radius: 4px;
@@ -1527,12 +1555,16 @@ body {
     .input-group.col-4 .custom-select-wrapper {
         width: calc(25% - 3px) !important;
     }
+
     .input-group.col-3 .custom-select-trigger,
     .input-group.col-4 .custom-select-trigger {
         padding-left: 4px !important;
-        padding-right: 18px !important; /* Less padding so text fits */
-        background-position: right 4px center !important; /* Move arrow closer to edge */
-        font-size: 13px !important; /* Slightly smaller text to guarantee fit */
+        padding-right: 18px !important;
+        /* Less padding so text fits */
+        background-position: right 4px center !important;
+        /* Move arrow closer to edge */
+        font-size: 13px !important;
+        /* Slightly smaller text to guarantee fit */
     }
 }
 
@@ -1541,7 +1573,59 @@ body {
     .input-group.col-4 .custom-select-wrapper {
         width: 100% !important;
     }
+
     .input-group.col-3 .custom-select-wrapper {
         width: calc(33.33% - 5.33px) !important;
     }
+}
+
+/* Restore overlap on mobile/tablet screens by removing the large top margin */
+@media (max-width: 900px) {
+    .calculator-card.luxury-card {
+        margin: 0 auto;
+    }
+}
+
+/* --- Scroll to Top Button --- */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #d4af37;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: #b5952f;
+    transform: translateY(-3px);
+}
+
+/* --- Section Breakers --- */
+.elegant-section-breaker {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px 10px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
