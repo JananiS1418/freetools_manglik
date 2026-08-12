@@ -124,54 +124,35 @@
 }
 
 .gf-box {
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    padding: 40px;
+    background: transparent;
+    padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
     position: relative;
 }
 
 /* Individual Feature Item */
 .gf-item {
-    flex: 1 1 16.666%;
-    padding: 0 15px;
+    flex: 1 1 150px;
+    max-width: 200px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 25px 15px;
     text-align: center;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gf-item:hover {
     transform: translateY(-5px);
-    /* Lift item up on hover */
-}
-
-/* Vertical Divider with Diamond */
-.gf-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 10%;
-    bottom: 10%;
-    width: 1px;
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.08), transparent);
-}
-
-.gf-item:not(:last-child) .gf-diamond {
-    position: absolute;
-    right: -7px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #D4AF37;
-    font-size: 14px;
-    background: #ffffff;
-    padding: 5px 0;
-    z-index: 2;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
 /* Icon Wrapper */
@@ -474,39 +455,32 @@
 /* ============================================================== */
 @media (max-width: 1024px) {
     .gf-item {
-        flex: 1 1 33.333%;
-        margin-bottom: 30px;
-    }
-    /* Hide the right divider for every 3rd item to prevent it from showing at the edge */
-    .gf-item:nth-child(3n)::after {
-        display: none;
+        flex: 1 1 calc(33.333% - 15px);
+        max-width: none;
     }
 }
 
 @media (max-width: 768px) {
     .gf-item {
-        flex: 1 1 50%;
-    }
-    /* Hide the right divider for every 2nd item */
-    .gf-item:nth-child(3n)::after {
-        display: block; /* reset previous rule */
-        background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.08), transparent);
-    }
-    .gf-item:nth-child(2n)::after {
-        display: none;
+        flex: 0 0 calc(33.333% - 10px);
+        max-width: calc(33.333% - 10px);
+        box-sizing: border-box;
     }
 }
 
 @media (max-width: 480px) {
     .gf-item {
-        flex: 1 1 100%;
-        margin-bottom: 40px;
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+        padding: 15px 10px;
+        box-sizing: border-box;
     }
-    /* Hide all vertical dividers on mobile */
-    .gf-item::after {
-        display: none !important;
+    .gf-item-title {
+        font-size: 13px;
     }
     .gf-box {
-        padding: 30px 15px;
+        padding: 20px 5px;
+        gap: 10px;
+        justify-content: center;
     }
 }

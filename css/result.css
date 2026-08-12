@@ -1811,6 +1811,23 @@
     .mp-main-grid {
         grid-template-columns: 1fr;
     }
+    .mp-email-card-new {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        width: 100%;
+    }
+    .mp-email-card-new .mec-title {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+    .mp-email-card-new .mec-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .mp-email-card-new .mec-icon-wrapper {
+        margin-bottom: 10px;
+    }
     .mp-summary-bar {
         flex-wrap: wrap;
         gap: 20px;
@@ -1818,16 +1835,21 @@
     .mp-summary-divider {
         display: none;
     }
-    .mp-talk-banner-new {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .mec-trust-badges {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
-    .mtb-left {
-        flex-direction: column;
+    .mec-badge {
+        text-align: left;
     }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 480px) {
     .mp-block-new {
         flex-direction: column;
         text-align: center;
@@ -1838,12 +1860,13 @@
     .mp-block-title {
         justify-content: center;
     }
-    .mec-trust-badges {
+    .mp-talk-banner-new {
         flex-direction: column;
-        align-items: center;
-    }
-    .mec-badge {
         text-align: center;
+        gap: 20px;
+    }
+    .mtb-left {
+        flex-direction: column;
     }
 }
 
@@ -2046,15 +2069,19 @@
         justify-content: center;
     }
     .nm-trust-badges {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 15px;
     }
 }
 
 /* --- Recommended Homas Section --- */
 .homa-section {
+    margin: 0 auto;
     margin-top: -30px;
-    padding: 0 80px;
+    padding: 0 20px;
+    max-width: 1200px;
     text-align: center;
 }
 
@@ -2120,10 +2147,40 @@
     margin: 0;
 }
 
-.homa-grid {
+.homa-grid,
+.remedies-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+    .homa-grid,
+    .remedies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .homa-card:last-child:nth-child(3),
+    .remedy-card:last-child:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 600px) {
+    .homa-grid,
+    .remedies-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    .homa-card:last-child:nth-child(3),
+    .remedy-card:last-child:nth-child(3) {
+        grid-column: auto;
+        width: 100%;
+    }
 }
 
 .homa-card {
@@ -2159,8 +2216,8 @@
 
 .homa-img-wrapper {
     position: relative;
-    width: 65%;
-    margin: 5px auto 10px auto;
+    width: 75%;
+    margin: 15px auto 10px auto;
     aspect-ratio: 1/1;
     overflow: hidden;
     background: transparent;
@@ -2237,15 +2294,4 @@
 
 .homa-btn:hover {
     background: #fef2f2;
-}
-
-@media (max-width: 1024px) {
-    .homa-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 768px) {
-    .homa-grid {
-        grid-template-columns: 1fr;
-    }
 }
