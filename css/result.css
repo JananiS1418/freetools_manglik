@@ -442,8 +442,8 @@
     }
 
     .summary-item {
-        padding: 22px 0;
-        /* Increased vertical spacing */
+        padding: 15px 20px;
+        /* Adjusted padding for tablet */
     }
 
     .s-icon-wrapper {
