@@ -142,6 +142,7 @@ body {
     margin-top: 5px;
     margin-bottom: 15px;
     box-shadow: 0 4px 15px rgba(74, 44, 140, 0.1);
+    white-space: nowrap;
     animation: floatBadge 4s ease-in-out infinite, fadeInUpHeader 0.8s ease-out forwards;
 }
 
@@ -1049,6 +1050,7 @@ body {
         margin-bottom: 8px;
         font-size: 10px;
         padding: 6px 12px;
+        letter-spacing: 0.8px;
     }
 
     .hero-title {
@@ -1409,15 +1411,14 @@ body {
 @media (max-width: 380px) {
     .hero-header-content {
         padding: 40px 5px 0 5px !important;
-        /* Keep the same top padding as other mobile screens for consistency */
-        max-width: calc(100% - 150px) !important;
-        /* Slightly less safe space, but banner scales down so it's fine */
+        max-width: calc(100% - 130px) !important;
     }
 
     .title-pill-badge {
-        font-size: 9px !important;
-        padding: 4px 8px !important;
+        font-size: 8px !important;
+        padding: 4px 6px !important;
         margin-bottom: 4px !important;
+        letter-spacing: 0.5px !important;
     }
 
     .hero-title .dark-text {
@@ -1497,7 +1498,8 @@ body {
     position: absolute;
     top: calc(100% + 5px);
     left: 0;
-    width: 100%;
+    min-width: 100%;
+    width: max-content;
     background: #FFFFFF;
     border: 1px solid rgba(214, 170, 72, 0.3);
     border-radius: 12px;
@@ -1525,6 +1527,7 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    white-space: nowrap;
 }
 
 .custom-option:last-child {
