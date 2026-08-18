@@ -8,12 +8,13 @@ body {
 
 /* --- Breadcrumbs --- */
 .breadcrumb-container {
-    max-width: 1200px;
-    margin: 0 auto 10px auto;
-    padding: 0 40px;
+    max-width: 100%;
+    margin: 0 0 10px 0;
+    padding: 0 10px;
     font-family: 'Inter', sans-serif;
     position: relative;
-    z-index: 10;
+    z-index: 20;
+    text-align: left;
     animation: breadcrumbFadeInDown 0.6s ease-out forwards;
     opacity: 0;
 }
@@ -37,14 +38,15 @@ body {
     font-size: 14px;
     color: #0f172a;
     background: #ffffff;
-    padding: 4px 16px;
-    border-radius: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    padding: 6px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(214, 170, 72, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .breadcrumb a {
-    color: #0056b3;
+    color: #1e3a8a;
+    font-weight: 600;
     text-decoration: none;
     transition: color 0.2s;
 }
@@ -55,12 +57,14 @@ body {
 }
 
 .breadcrumb .separator {
-    color: #cbd5e1;
-    font-size: 12px;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 13px;
 }
 
 .breadcrumb .current {
     color: #0f172a;
+    font-weight: 600;
 }
 
 @media (max-width: 900px) {
@@ -78,7 +82,7 @@ body {
     background-repeat: no-repeat;
     background-color: #FFFDFB;
     position: relative;
-    padding: 12px 15px 0px;
+    padding: 27px 15px 0px;
     /* Bottom padding is 0, we'll let guidance-section handle the spacing */
     font-family: 'Inter', sans-serif;
     border-bottom: none;
@@ -119,7 +123,7 @@ body {
 .hero-header-content {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 40px;
+    margin: 25px auto 40px;
     /* Increased bottom margin to push form further down and reduce overlap */
     position: relative;
     z-index: 5;
@@ -189,9 +193,9 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 15px;
-    color: #333333;
-    font-weight: 500;
+    font-size: 16px;
+    color: #1a1a1a;
+    font-weight: 600;
     line-height: 1.6;
     margin: 0 auto;
     max-width: 650px;
@@ -592,17 +596,20 @@ body {
         grid-template-columns: repeat(14, 1fr);
     }
 
-    .calc-form-grid > .form-group:nth-child(1) {
-        grid-column: span 6; /* Birth Date */
+    .calc-form-grid>.form-group:nth-child(1) {
+        grid-column: span 6;
+        /* Birth Date */
     }
 
-    .calc-form-grid > .form-group:nth-child(2) {
-        grid-column: span 8; /* Birth Time */
+    .calc-form-grid>.form-group:nth-child(2) {
+        grid-column: span 8;
+        /* Birth Time */
     }
 
-    .calc-form-grid > .form-group:nth-child(3),
-    .calc-form-grid > .form-group:nth-child(4) {
-        grid-column: span 7; /* Birth Country & Birth City (equal width) */
+    .calc-form-grid>.form-group:nth-child(3),
+    .calc-form-grid>.form-group:nth-child(4) {
+        grid-column: span 7;
+        /* Birth Country & Birth City (equal width) */
     }
 
     .action-container.full-width,
@@ -992,7 +999,7 @@ body {
         /* Move background to ::before for perfect overlap */
         background-color: transparent;
         position: relative;
-        padding: 0;
+        padding: 15px 0 0 0;
         overflow: visible;
         /* Ensure card can flow outside */
         border-bottom: none;
@@ -1026,8 +1033,8 @@ body {
         /* Increased to 180px to safely clear the deity's knee completely */
         height: 300px;
         /* Restored to fixed height to anchor form card correctly */
-        padding: 40px 10px 0 5px;
-        /* Restored original top padding */
+        padding: 65px 10px 0 5px;
+        /* Increased top padding to push text downwards */
         box-sizing: border-box;
         text-align: center;
         display: flex;
@@ -1184,12 +1191,13 @@ body {
 }
 
 .gold-text {
-    color: #B27B1E;
+    color: #8B5A10;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
 }
 
 .title-divider .line {
-    background: rgba(214, 170, 72, 0.2);
-    height: 1px;
+    background: rgba(180, 140, 50, 0.6);
+    height: 1.5px;
     width: 150px;
 }
 
@@ -1302,7 +1310,7 @@ body {
         background-image: none !important;
         background-color: transparent !important;
         position: relative;
-        padding: 0 !important;
+        padding: 15px 0 0 0 !important;
         overflow: visible !important;
         border-bottom: none !important;
         z-index: 1;
@@ -1586,6 +1594,28 @@ body {
     }
 }
 
+/* Small laptops (1024px to 1200px) adjustment to ensure banner overlap */
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .calculator-card.luxury-card {
+        margin-top: 40px;
+    }
+
+    .hero-subtitle {
+        margin-top: 15px;
+    }
+}
+
+/* Large laptops (1201px to 1440px) adjustment to reduce form overlap */
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .calculator-card.luxury-card {
+        margin-top: 120px;
+    }
+
+    .hero-subtitle {
+        margin-top: 15px;
+    }
+}
+
 /* --- Scroll to Top Button --- */
 .scroll-to-top {
     position: fixed;
@@ -1628,4 +1658,120 @@ body {
     margin: 0 auto;
     position: relative;
     z-index: 10;
+}
+
+/* --- CTA Banner --- */
+.cta-banner-new {
+    background: linear-gradient(135deg, #fdfbfe 0%, #f5f3fa 100%);
+    border-radius: 20px;
+    padding: 50px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 30px auto 0;
+    border: 1px solid rgba(74, 44, 140, 0.05);
+}
+
+.cta-banner-bg-elements .cta-star {
+    position: absolute;
+    color: #d1c4e9;
+    font-size: 24px;
+}
+.star-1 { top: 40px; left: 15%; animation: pulseStar 3s infinite; }
+.star-2 { top: 50%; right: 15%; animation: pulseStar 4s infinite 1s; }
+
+.cta-icon-circle {
+    width: 54px;
+    height: 54px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border: 1px solid rgba(74, 44, 140, 0.1);
+    box-shadow: 0 4px 10px rgba(74, 44, 140, 0.05);
+}
+
+.cta-icon-circle svg {
+    width: 26px;
+    height: 26px;
+}
+
+.cta-banner-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #1a1a1a;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.highlight-purple {
+    color: #4A2C8C;
+}
+
+.cta-banner-desc {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.btn-consult-astrologer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #4A2C8C;
+    color: #fff;
+    font-weight: 600;
+    padding: 16px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    box-shadow: 0 4px 15px rgba(74, 44, 140, 0.2);
+    margin-bottom: 20px;
+}
+
+.btn-consult-astrologer:hover {
+    background: #39226e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 44, 140, 0.3);
+    color: #fff;
+    text-decoration: none;
+}
+
+.consult-chat-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.cta-trust-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.cta-trust-badge svg {
+    width: 16px;
+    height: 16px;
+}
+
+@keyframes pulseStar {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+@media (max-width: 900px) {
+    .cta-banner-title {
+        font-size: 26px;
+    }
 }
